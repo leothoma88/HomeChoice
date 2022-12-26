@@ -3,13 +3,25 @@ import React from "react";
 import { useLocation } from 'react-router-dom';
 import Home from "../assets/pexels-binyamin-mellish-106399.jpg"
 import {Link} from 'react-router-dom';
+import { useQuery, useMutation } from "@apollo/client";
+// import { QUERY_HOMES } from '../utils/queries';
+
 
 
 
 
 function Results() {
+  
+
+
   const location = useLocation();
   const formData = location.state.formData;
+
+  // const { loading, data } = useQuery(QUERY_HOMES,{
+  //   variables:{area: formData.area,size: formData.space, bedroomsandBath: formData.bedroomsandBath, stories:formData.stories,style:formData.style}
+  // } );
+
+  // console.log(data,"idk")
 
   console.log(formData,"What")
 

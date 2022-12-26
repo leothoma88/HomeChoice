@@ -3,10 +3,42 @@
       "name": "Foundations of Data Science",
       "area": "CHEM",
       "size": 3,
+      "image": "../assets/pexels-binyamin-mellish-106399.jpg",
       "price": 300000,
       "bedroomsandBath":3,
       "stories": "2+",
       "style:":"Townhouse"
-        }
+        },
+        {
+      "name": "Forestor street",
+      "area": "Midtown",
+      "size": 3,
+      "image": "../assets/pexels-binyamin-mellish-106399.jpg",
+      "price": 200000,
+      "bedroomsandBath":3,
+      "stories": "1",
+      "style:":"Single Family Home"
+        },
+      {
+      "name": "Hambrick Rd.",
+      "area": "Dekalb",
+      "size": 3,
+      "image": "../assets/pexels-binyamin-mellish-106399.jpg",
+      "price": 400000,
+      "bedroomsandBath":1,
+      "stories": "1",
+      "style:":"Condo"
+        },
+       {
+        "name": "Doodoo",
+        "area": "Henry",
+        "size": 3,
+        "image": "../assets/pexels-binyamin-mellish-106399.jpg",
+         "price": 230000,
+         "bedroomsandBath":4,
+        "stories": "2+",
+         "style:":"Townhouse"
+                }
+          
   ]
   

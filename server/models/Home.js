@@ -12,6 +12,11 @@ const homeSchema = new Schema(
       type: String,
       required: true
     },
+    image: {
+      type: String,
+      required: true
+    },
+    
     size: {
       type: Number,
       required: true

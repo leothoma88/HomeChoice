@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Home {
     _id: ID
     name: String
+    image: String
     area: String
     size: Int
     price: Int
@@ -13,7 +14,7 @@ const typeDefs = gql`
   }
 
     type Query {
-      homes: [Home]!
+      homes(area: String,size: Int, bedroomsandBath: Int, stories: String, style: String): [Home]
   }
 `;  
 

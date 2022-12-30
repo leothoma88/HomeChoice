@@ -1,12 +1,13 @@
 import React from "react";
 
 const Header = () => {
-    return (
-      <div>
-          <div className="h-32 bg-[#0047AC]"></div>
-             
-      </div>
-    );
-  };
+  return (
+    <div>
+      <header>
+        <span className="icon"> 🏡</span> Home Choice
+      </header>
+    </div>
+  );
+};
 
-  export default Header;
+export default Header;

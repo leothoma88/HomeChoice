@@ -47,7 +47,10 @@ function QuestionnaireForm(props) {
 
   return (
     <div className="flex justify-center sm:flex-wrap">
-      <form className="m-20 h-2/3 w-1/2 bg-[#FFD301]" onSubmit={handleSubmit}>
+      <form
+        className="question-form m-20 h-2/3 w-1/2 rounded-md"
+        onSubmit={handleSubmit}
+      >
         {/* first step of the questionnaire */}
         {currentStep === 1 && (
           <div className="flex flex-wrap grid flex justify-center m-10 font-extrabold text-center">
@@ -55,7 +58,7 @@ function QuestionnaireForm(props) {
               First Name:
             </label>
             <input
-              className="inline-block"
+              className="inline-block rounded-md"
               name="fname"
               type="text"
               id="fname"
@@ -65,6 +68,7 @@ function QuestionnaireForm(props) {
               Last Name:
             </label>
             <input
+              className="inline-block rounded-md"
               type="text"
               name="lname"
               id="lname"
@@ -72,6 +76,7 @@ function QuestionnaireForm(props) {
             />
             <label htmlFor="name">Email:</label>
             <input
+              className="inline-block rounded-md"
               type="text"
               name="email"
               id="email"
@@ -79,6 +84,7 @@ function QuestionnaireForm(props) {
             />
             <label htmlFor="name">Phone Number:</label>
             <input
+              className="inline-block rounded-md"
               type="text"
               name="phoneNumber"
               id="phoneNumber"
@@ -97,49 +103,65 @@ function QuestionnaireForm(props) {
         )}
         {/* second step of the questionnaire */}
         {currentStep === 2 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
-            <label>Which one of these fits your needs best?</label>
+          <div className="flex flex-wrap font-extrabold grid flex justify-center m-10 rounded-2xl">
+            <h2>Which one of these fits your needs best?</h2>
             <div className="font-extrabold text-center grid flex justify-center m-10">
-              5 bedroom 3 1/2 bathroom
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="bedroomsandBath"
-                value="5"
-                onChange={handleChange}
-              />
-              4 bedroom 2 1/2 bathroom
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="bedroomsandBath"
-                value="4"
-                onChange={handleChange}
-              />
-              3 bedroom 2 1/2 bathroom
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="bedroomsandBath"
-                value="3"
-                onChange={handleChange}
-              />
-              2 bedroom 1 1/2 bathroom
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="bedroomsandBath"
-                value="2"
-                onChange={handleChange}
-              />
-              1 bedroom 1 bathroom
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="bedroomsandBath"
-                value="1"
-                onChange={handleChange}
-              />
+              {/* choice 1 */}
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="bedroomsandBath"
+                  value="5"
+                  onChange={handleChange}
+                />
+                5 🛏️ bedroom | 3.5 🛀 bathroom
+              </div>
+              {/* choice 2 */}
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="bedroomsandBath"
+                  value="4"
+                  onChange={handleChange}
+                />
+                4 🛏️ bedroom 2.5 🛀 bathroom
+              </div>
+
+              {/* choice 3 */}
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="bedroomsandBath"
+                  value="3"
+                  onChange={handleChange}
+                />
+                3 🛏️ bedroom 2.5 🛀 bathroom
+              </div>
+              {/* choice 4 */}
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="bedroomsandBath"
+                  value="2"
+                  onChange={handleChange}
+                />
+                2 🛏️ bedroom 1.5 🛀 bathroom
+              </div>
+              {/* choice 5 */}
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="bedroomsandBath"
+                  value="1"
+                  onChange={handleChange}
+                />
+                1 🛏️ bedroom 1 🛀 bathroom
+              </div>
             </div>
 
             <div className="flex justify-center">
@@ -165,30 +187,36 @@ function QuestionnaireForm(props) {
           <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
             <label>Which style of home would fit your needs the best?</label>
             <div className="font-extrabold text-center grid flex justify-center m-10">
-              Single Family Home
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="style"
-                value="Single Family Residence"
-                onChange={handleChange}
-              />
-              Townhouse
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="style"
-                value="Townhouse"
-                onChange={handleChange}
-              />
-              Condo
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="style"
-                value="Condo"
-                onChange={handleChange}
-              />
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="style"
+                  value="Single Family Residence"
+                  onChange={handleChange}
+                />
+                Single Family Home 👪
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="style"
+                  value="Townhouse"
+                  onChange={handleChange}
+                />
+                Townhouse 🏘️
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="style"
+                  value="Condo"
+                  onChange={handleChange}
+                />
+                Condo 🏠
+              </div>
             </div>
             <div className="flex justify-center">
               <button
@@ -213,38 +241,47 @@ function QuestionnaireForm(props) {
           <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
             <label>How many stories do you need?</label>
             <div className="font-extrabold text-center grid flex justify-center m-10">
-              Multi/Split
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="stories"
-                value="Multi/Split"
-                onChange={handleChange}
-              />
-              3 or more
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="stories"
-                value="3+"
-                onChange={handleChange}
-              />
-              2 or more
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="stories"
-                value="2+"
-                onChange={handleChange}
-              />
-              1
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="stories"
-                value="1"
-                onChange={handleChange}
-              />
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="stories"
+                  value="Multi/Split"
+                  onChange={handleChange}
+                />
+                Multi/Split
+              </div>
+
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="stories"
+                  value="3"
+                  onChange={handleChange}
+                />
+                3 or more
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="stories"
+                  value="2"
+                  onChange={handleChange}
+                />
+                2 or more
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="stories"
+                  value="1"
+                  onChange={handleChange}
+                />
+                1 story
+              </div>
             </div>
 
             <div className="flex justify-center">
@@ -271,46 +308,60 @@ function QuestionnaireForm(props) {
             <label>How much space do you need?</label>
 
             <div className="font-extrabold text-center grid flex justify-center m-10">
-              4000+ sq ft
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="space"
-                value="4000+ sq ft"
-                onChange={handleChange}
-              />
-              3000+ sq ft
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="space"
-                value="3000+ sq ft"
-                onChange={handleChange}
-              />
-              2000+ sq ft
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="space"
-                value="2000+ sq ft"
-                onChange={handleChange}
-              />
-              1200+ sq ft
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="space"
-                value="1200+ sq ft"
-                onChange={handleChange}
-              />
-              700+ sq ft
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="space"
-                value="700+ sq ft"
-                onChange={handleChange}
-              />
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="space"
+                  value="4000+ sq ft"
+                  onChange={handleChange}
+                />
+                4000+ sq ft
+              </div>
+
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="space"
+                  value="3000+ sq ft"
+                  onChange={handleChange}
+                />
+                3000+ sq ft
+              </div>
+
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="space"
+                  value="2000+ sq ft"
+                  onChange={handleChange}
+                />
+                2000+ sq ft
+              </div>
+
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="space"
+                  value="1200+ sq ft"
+                  onChange={handleChange}
+                />
+                1200+ sq ft
+              </div>
+
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="space"
+                  value="700+ sq ft"
+                  onChange={handleChange}
+                />
+                700+ sq ft
+              </div>
             </div>
 
             <div className="flex justify-center">
@@ -341,62 +392,78 @@ function QuestionnaireForm(props) {
             </label>
 
             <div className="font-extrabold text-center grid flex justify-center m-10">
-              Gwinnett County
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="area"
-                value="Gwinnett"
-                onChange={handleChange}
-              />
-              North Fulton (Johns Creek,Roswell,Alpharetta
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="area"
-                value=" North Fulton"
-                onChange={handleChange}
-              />
-              Midtown
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="area"
-                value="Midtown"
-                onChange={handleChange}
-              />
-              Cobb County
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="area"
-                value="Cobb"
-                onChange={handleChange}
-              />
-              Dekalb County
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="area"
-                value="Dekalb"
-                onChange={handleChange}
-              />
-              Douglas County
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="area"
-                value="Douglas"
-                onChange={handleChange}
-              />
-              Henry County
-              <input
-                className="mt-1.5"
-                type="radio"
-                name="area"
-                value="Henry"
-                onChange={handleChange}
-              />
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="area"
+                  value="Gwinnett"
+                  onChange={handleChange}
+                />
+                Gwinnett County
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="area"
+                  value=" North Fulton"
+                  onChange={handleChange}
+                />
+                North Fulton (Johns Creek,Roswell,Alpharetta)
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="area"
+                  value="Midtown"
+                  onChange={handleChange}
+                />
+                Midtown
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="area"
+                  value="Cobb"
+                  onChange={handleChange}
+                />
+                Cobb County
+              </div>
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="area"
+                  value="Dekalb"
+                  onChange={handleChange}
+                />
+                Dekalb County
+              </div>
+
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="area"
+                  value="Douglas"
+                  onChange={handleChange}
+                />
+                Douglas County
+              </div>
+
+              <div>
+                <input
+                  className="mt-1.5"
+                  type="radio"
+                  name="area"
+                  value="Henry"
+                  onChange={handleChange}
+                />
+                Henry County
+              </div>
             </div>
             <div className="flex justify-center">
               <button
@@ -419,7 +486,7 @@ function QuestionnaireForm(props) {
         {/* third step of the questionnaire */}
         {currentStep === 7 && (
           <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
-            <p className="mb-8 grid flex justify-center">ARE YOU DONE?</p>
+            <p className="mb-8 grid flex justify-center">ALL DONE!</p>
             <div className="flex justify-center">
               <button
                 className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -455,5 +522,3 @@ function QuestionnaireForm(props) {
 }
 
 export default QuestionnaireForm;
-
-// export default Main;

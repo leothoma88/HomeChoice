@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Home {
@@ -13,9 +13,15 @@ const typeDefs = gql`
     style: String
   }
 
-    type Query {
-      homes(area: String,size: Int, bedroomsandBath: Int, stories: String, style: String): [Home]
+  type Query {
+    homes(
+      area: String
+      size: Int
+      bedroomsandBath: Int
+      stories: String
+      style: String
+    ): [Home]
   }
-`;  
+`;
 
 module.exports = typeDefs;

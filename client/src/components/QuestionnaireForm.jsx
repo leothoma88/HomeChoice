@@ -1,20 +1,39 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function QuestionnaireForm(props) {
-  //Buttons dissapear and reappear
-  const [showButton1, setShowButton1] = useState(true);
-  const [showButton2, setShowButton2] = useState(false);
 
-  const handleButton1Click = () => {
-    setShowButton1(false);
-    setShowButton2(true);
-  };
+  const [formCompleted, setFormCompleted] = useState(false);
+//
 
-  const handleButton2Click = () => {
-    setShowButton1(true);
-    setShowButton2(false);
-  };
+
+
+ //Buttons dissapear and reappear
+const [showButton1, setShowButton1] = useState(true);
+const [showButton2, setShowButton2] = useState(false);
+
+const handleButton1Click = () => {
+  setShowButton1(false);
+  setShowButton2(true);
+}
+
+const handleButton2Click = () => {
+  setShowButton1(true);
+  setShowButton2(false);
+}
+  
+
+  const [allAnswersFilledIn, setAllAnswersFilledIn] = useState(false);
+  const submitty = useRef(null)
+
+  useEffect(() => {
+    // const form = document.querySelector('submitbutton');
+    // const submitButton = form.querySelector('button[type="submit"]'); 
+    
+    submitty.disabled = !allAnswersFilledIn;
+  }, [allAnswersFilledIn]);
+
+
 
   // state variable to track the current step
   const [currentStep, setCurrentStep] = useState(1);
@@ -26,6 +45,10 @@ function QuestionnaireForm(props) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((formData) => ({ ...formData, [name]: value }));
+    setAllAnswersFilledIn(true)
+    const allPagesComplete = true;
+    setFormCompleted(allPagesComplete)
+   
   };
 
   // event handler for moving to the next step
@@ -41,6 +64,7 @@ function QuestionnaireForm(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate("/results", { state: { formData } });
+    setFormCompleted(true)
 
     // submit the form data to the server or do something else with it
   };
@@ -192,7 +216,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="style"
-                  value="Single Family Residence"
+                  value="single_family"
                   onChange={handleChange}
                 />
                 Single Family Home 👪
@@ -202,7 +226,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="style"
-                  value="Townhouse"
+                  value="multi_family"
                   onChange={handleChange}
                 />
                 Townhouse 🏘️
@@ -212,7 +236,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="style"
-                  value="Condo"
+                  value="multi_family"
                   onChange={handleChange}
                 />
                 Condo 🏠
@@ -246,7 +270,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="stories"
-                  value="Multi/Split"
+                  value="multi"
                   onChange={handleChange}
                 />
                 Multi/Split
@@ -257,7 +281,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="stories"
-                  value="3"
+                  value="multi"
                   onChange={handleChange}
                 />
                 3 or more
@@ -266,7 +290,7 @@ function QuestionnaireForm(props) {
                 <input
                   className="mt-1.5"
                   type="radio"
-                  name="stories"
+                  name="multi"
                   value="2"
                   onChange={handleChange}
                 />
@@ -276,7 +300,7 @@ function QuestionnaireForm(props) {
                 <input
                   className="mt-1.5"
                   type="radio"
-                  name="stories"
+                  name="single"
                   value="1"
                   onChange={handleChange}
                 />
@@ -313,7 +337,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="space"
-                  value="4000+ sq ft"
+                  value="3750"
                   onChange={handleChange}
                 />
                 4000+ sq ft
@@ -324,7 +348,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="space"
-                  value="3000+ sq ft"
+                  value="3000"
                   onChange={handleChange}
                 />
                 3000+ sq ft
@@ -335,7 +359,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="space"
-                  value="2000+ sq ft"
+                  value="2000"
                   onChange={handleChange}
                 />
                 2000+ sq ft
@@ -346,7 +370,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="space"
-                  value="1200+ sq ft"
+                  value="1200"
                   onChange={handleChange}
                 />
                 1200+ sq ft
@@ -357,7 +381,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="space"
-                  value="700+ sq ft"
+                  value="750"
                   onChange={handleChange}
                 />
                 700+ sq ft
@@ -397,7 +421,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Gwinnett"
+                  value="Duluth"
                   onChange={handleChange}
                 />
                 Gwinnett County
@@ -407,7 +431,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value=" North Fulton"
+                  value="Roswell"
                   onChange={handleChange}
                 />
                 North Fulton (Johns Creek,Roswell,Alpharetta)
@@ -417,7 +441,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Midtown"
+                  value="Midtown Atlanta"
                   onChange={handleChange}
                 />
                 Midtown
@@ -427,7 +451,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Cobb"
+                  value="Kennesaw"
                   onChange={handleChange}
                 />
                 Cobb County
@@ -437,7 +461,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Dekalb"
+                  value="Decatur"
                   onChange={handleChange}
                 />
                 Dekalb County
@@ -448,7 +472,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Douglas"
+                  value="Douglasville"
                   onChange={handleChange}
                 />
                 Douglas County
@@ -459,7 +483,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Henry"
+                  value="Stockbridge"
                   onChange={handleChange}
                 />
                 Henry County
@@ -495,24 +519,25 @@ function QuestionnaireForm(props) {
               >
                 Previous
               </button>
+              <button style={{ display: showButton1 ? 'block' : 'none' }}
+        onClick={handleButton1Click} className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"type="submit" ref={submitty} disabled={!formCompleted}>Submit</button>
+            <Link to="/results"><button style={{ display: showButton2 ? 'block' : 'none' }}
+        onClick={handleButton2Click} className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"type="submit">See My Options</button>
+        </Link>
+{/* 
+              <Link to="/results">
               <button
-                style={{ display: showButton1 ? "block" : "none" }}
-                onClick={handleButton1Click}
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              ref={submitty}
+            
+                
+                className="sumbitty bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 type="submit"
+               disabled
               >
                 Submit
               </button>
-              <Link to="/results">
-                <button
-                  style={{ display: showButton2 ? "block" : "none" }}
-                  onClick={handleButton2Click}
-                  className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  type="submit"
-                >
-                  See My Options
-                </button>
-              </Link>
+              </Link> */}
+              
             </div>
           </div>
         )}

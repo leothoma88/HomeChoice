@@ -10,13 +10,36 @@ function Results() {
   const location = useLocation();
   const formData = location.state.formData;
 
+  //Pull API DATA
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '72ddbc841bmsh8b56aa2a6ef50e7p1e74f1jsn17c984253b3e',
+      'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com'
+    }
+  };
+  
+   fetch(`https://us-real-estate.p.rapidapi.com/for-sale?offset=0&limit=42&state_code=GA&city=Atlanta&sort=newest&beds_min=${formData.bedroomsandBath}&baths_min=2&property_type=multi_family&home_size_min=1200&stories=single`, options)
+    .then(response => response.json())
+    .then(response => somethingdata(response))
+    .catch(err => console.error(err));
+
+
   // const { loading, data } = useQuery(QUERY_HOMES,{
   //   variables:{area: formData.area,size: formData.space, bedroomsandBath: formData.bedroomsandBath, stories:formData.stories,style:formData.style}
   // } );
-
+const somethingdata = (arg) =>{
+  console.log(arg.response,"DWEDWEFEWFWFEWF")
+}
   // console.log(data,"idk")
 
-  console.log(formData, "What");
+
+ 
+
+  console.log(formData,"What")
+
+
 
   return (
     <div className="results flex justify-center items-center">

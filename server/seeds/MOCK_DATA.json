@@ -1,0 +1,1002 @@
+[
+  {
+    "name": "Anderson",
+    "area": "Wit",
+    "size": 1,
+    "image": "http://dummyimage.com/245x100.png/cc0000/ffffff",
+    "price": "$0.42",
+    "bedroomsandBath": 1,
+    "stories": 12,
+    "styles": "Liliaceae"
+  },
+  {
+    "name": "Service",
+    "area": "Kayne",
+    "size": 2,
+    "image": "http://dummyimage.com/162x100.png/cc0000/ffffff",
+    "price": "$7.29",
+    "bedroomsandBath": 2,
+    "stories": 11,
+    "styles": "Solanaceae"
+  },
+  {
+    "name": "Little Fleur",
+    "area": "Jakie",
+    "size": 3,
+    "image": "http://dummyimage.com/125x100.png/dddddd/000000",
+    "price": "$5.41",
+    "bedroomsandBath": 3,
+    "stories": 97,
+    "styles": "Ephedraceae"
+  },
+  {
+    "name": "Summerview",
+    "area": "Kristel",
+    "size": 4,
+    "image": "http://dummyimage.com/233x100.png/cc0000/ffffff",
+    "price": "$6.68",
+    "bedroomsandBath": 4,
+    "stories": 100,
+    "styles": "Brassicaceae"
+  },
+  {
+    "name": "Ilene",
+    "area": "Josefina",
+    "size": 5,
+    "image": "http://dummyimage.com/157x100.png/cc0000/ffffff",
+    "price": "$4.80",
+    "bedroomsandBath": 5,
+    "stories": 22,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "5th",
+    "area": "Goldina",
+    "size": 6,
+    "image": "http://dummyimage.com/228x100.png/ff4444/ffffff",
+    "price": "$6.47",
+    "bedroomsandBath": 6,
+    "stories": 23,
+    "styles": "Betulaceae"
+  },
+  {
+    "name": "Kedzie",
+    "area": "Valeda",
+    "size": 7,
+    "image": "http://dummyimage.com/185x100.png/dddddd/000000",
+    "price": "$7.71",
+    "bedroomsandBath": 7,
+    "stories": 26,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Old Shore",
+    "area": "Karlene",
+    "size": 8,
+    "image": "http://dummyimage.com/226x100.png/5fa2dd/ffffff",
+    "price": "$5.54",
+    "bedroomsandBath": 8,
+    "stories": 93,
+    "styles": "Mycocaliciaceae"
+  },
+  {
+    "name": "Namekagon",
+    "area": "Georgy",
+    "size": 9,
+    "image": "http://dummyimage.com/215x100.png/dddddd/000000",
+    "price": "$5.24",
+    "bedroomsandBath": 9,
+    "stories": 59,
+    "styles": "Hypnaceae"
+  },
+  {
+    "name": "Moulton",
+    "area": "Madonna",
+    "size": 10,
+    "image": "http://dummyimage.com/242x100.png/cc0000/ffffff",
+    "price": "$9.68",
+    "bedroomsandBath": 10,
+    "stories": 68,
+    "styles": "Ericaceae"
+  },
+  {
+    "name": "Forest Dale",
+    "area": "Mychal",
+    "size": 11,
+    "image": "http://dummyimage.com/116x100.png/5fa2dd/ffffff",
+    "price": "$0.55",
+    "bedroomsandBath": 11,
+    "stories": 66,
+    "styles": "Poaceae"
+  },
+  {
+    "name": "Meadow Valley",
+    "area": "Claire",
+    "size": 12,
+    "image": "http://dummyimage.com/101x100.png/cc0000/ffffff",
+    "price": "$4.07",
+    "bedroomsandBath": 12,
+    "stories": 74,
+    "styles": "Pinaceae"
+  },
+  {
+    "name": "Dawn",
+    "area": "Win",
+    "size": 13,
+    "image": "http://dummyimage.com/205x100.png/dddddd/000000",
+    "price": "$1.22",
+    "bedroomsandBath": 13,
+    "stories": 4,
+    "styles": "Opegraphaceae"
+  },
+  {
+    "name": "Melody",
+    "area": "Eudora",
+    "size": 14,
+    "image": "http://dummyimage.com/204x100.png/5fa2dd/ffffff",
+    "price": "$6.87",
+    "bedroomsandBath": 14,
+    "stories": 47,
+    "styles": "Fabaceae"
+  },
+  {
+    "name": "Glacier Hill",
+    "area": "Gail",
+    "size": 15,
+    "image": "http://dummyimage.com/202x100.png/5fa2dd/ffffff",
+    "price": "$2.28",
+    "bedroomsandBath": 15,
+    "stories": 57,
+    "styles": "Rosaceae"
+  },
+  {
+    "name": "Service",
+    "area": "Ingeborg",
+    "size": 16,
+    "image": "http://dummyimage.com/247x100.png/ff4444/ffffff",
+    "price": "$5.54",
+    "bedroomsandBath": 16,
+    "stories": 12,
+    "styles": "Rubiaceae"
+  },
+  {
+    "name": "Kensington",
+    "area": "Elizabet",
+    "size": 17,
+    "image": "http://dummyimage.com/161x100.png/ff4444/ffffff",
+    "price": "$0.72",
+    "bedroomsandBath": 17,
+    "stories": 48,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Cottonwood",
+    "area": "Verile",
+    "size": 18,
+    "image": "http://dummyimage.com/116x100.png/cc0000/ffffff",
+    "price": "$8.39",
+    "bedroomsandBath": 18,
+    "stories": 35,
+    "styles": "Parmeliaceae"
+  },
+  {
+    "name": "Elka",
+    "area": "Cosme",
+    "size": 19,
+    "image": "http://dummyimage.com/171x100.png/ff4444/ffffff",
+    "price": "$6.07",
+    "bedroomsandBath": 19,
+    "stories": 56,
+    "styles": "Dennstaedtiaceae"
+  },
+  {
+    "name": "Commercial",
+    "area": "Mair",
+    "size": 20,
+    "image": "http://dummyimage.com/201x100.png/ff4444/ffffff",
+    "price": "$7.87",
+    "bedroomsandBath": 20,
+    "stories": 33,
+    "styles": "Amblystegiaceae"
+  },
+  {
+    "name": "Sheridan",
+    "area": "Dix",
+    "size": 21,
+    "image": "http://dummyimage.com/225x100.png/cc0000/ffffff",
+    "price": "$9.66",
+    "bedroomsandBath": 21,
+    "stories": 84,
+    "styles": "Poaceae"
+  },
+  {
+    "name": "Mcbride",
+    "area": "Anica",
+    "size": 22,
+    "image": "http://dummyimage.com/183x100.png/cc0000/ffffff",
+    "price": "$0.72",
+    "bedroomsandBath": 22,
+    "stories": 42,
+    "styles": "Physciaceae"
+  },
+  {
+    "name": "Killdeer",
+    "area": "Bethany",
+    "size": 23,
+    "image": "http://dummyimage.com/242x100.png/ff4444/ffffff",
+    "price": "$8.81",
+    "bedroomsandBath": 23,
+    "stories": 4,
+    "styles": "Apocynaceae"
+  },
+  {
+    "name": "South",
+    "area": "Celestyn",
+    "size": 24,
+    "image": "http://dummyimage.com/107x100.png/5fa2dd/ffffff",
+    "price": "$2.93",
+    "bedroomsandBath": 24,
+    "stories": 35,
+    "styles": "Aristolochiaceae"
+  },
+  {
+    "name": "Crowley",
+    "area": "Isak",
+    "size": 25,
+    "image": "http://dummyimage.com/177x100.png/5fa2dd/ffffff",
+    "price": "$2.20",
+    "bedroomsandBath": 25,
+    "stories": 45,
+    "styles": "Fagaceae"
+  },
+  {
+    "name": "American Ash",
+    "area": "Gizela",
+    "size": 26,
+    "image": "http://dummyimage.com/190x100.png/cc0000/ffffff",
+    "price": "$7.91",
+    "bedroomsandBath": 26,
+    "stories": 64,
+    "styles": "Fabaceae"
+  },
+  {
+    "name": "Cordelia",
+    "area": "Brand",
+    "size": 27,
+    "image": "http://dummyimage.com/167x100.png/dddddd/000000",
+    "price": "$0.75",
+    "bedroomsandBath": 27,
+    "stories": 9,
+    "styles": "Parmeliaceae"
+  },
+  {
+    "name": "Mcbride",
+    "area": "Reuben",
+    "size": 28,
+    "image": "http://dummyimage.com/204x100.png/cc0000/ffffff",
+    "price": "$6.20",
+    "bedroomsandBath": 28,
+    "stories": 44,
+    "styles": "Myrsinaceae"
+  },
+  {
+    "name": "Ryan",
+    "area": "Warden",
+    "size": 29,
+    "image": "http://dummyimage.com/160x100.png/5fa2dd/ffffff",
+    "price": "$0.99",
+    "bedroomsandBath": 29,
+    "stories": 59,
+    "styles": "Pteridaceae"
+  },
+  {
+    "name": "Hanson",
+    "area": "Sibby",
+    "size": 30,
+    "image": "http://dummyimage.com/114x100.png/cc0000/ffffff",
+    "price": "$5.10",
+    "bedroomsandBath": 30,
+    "stories": 13,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Cambridge",
+    "area": "Wren",
+    "size": 31,
+    "image": "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
+    "price": "$4.32",
+    "bedroomsandBath": 31,
+    "stories": 27,
+    "styles": "Plantaginaceae"
+  },
+  {
+    "name": "Algoma",
+    "area": "Freeland",
+    "size": 32,
+    "image": "http://dummyimage.com/141x100.png/ff4444/ffffff",
+    "price": "$8.51",
+    "bedroomsandBath": 32,
+    "stories": 4,
+    "styles": "Dryopteridaceae"
+  },
+  {
+    "name": "Bluestem",
+    "area": "Marleen",
+    "size": 33,
+    "image": "http://dummyimage.com/232x100.png/ff4444/ffffff",
+    "price": "$0.15",
+    "bedroomsandBath": 33,
+    "stories": 89,
+    "styles": "Bartramiaceae"
+  },
+  {
+    "name": "Charing Cross",
+    "area": "Selene",
+    "size": 34,
+    "image": "http://dummyimage.com/102x100.png/dddddd/000000",
+    "price": "$1.13",
+    "bedroomsandBath": 34,
+    "stories": 36,
+    "styles": "Euphorbiaceae"
+  },
+  {
+    "name": "Hudson",
+    "area": "Salome",
+    "size": 35,
+    "image": "http://dummyimage.com/199x100.png/dddddd/000000",
+    "price": "$3.10",
+    "bedroomsandBath": 35,
+    "stories": 76,
+    "styles": "Rosaceae"
+  },
+  {
+    "name": "Sommers",
+    "area": "Amber",
+    "size": 36,
+    "image": "http://dummyimage.com/250x100.png/5fa2dd/ffffff",
+    "price": "$9.26",
+    "bedroomsandBath": 36,
+    "stories": 23,
+    "styles": "Caryophyllaceae"
+  },
+  {
+    "name": "Arrowood",
+    "area": "Mair",
+    "size": 37,
+    "image": "http://dummyimage.com/125x100.png/ff4444/ffffff",
+    "price": "$5.13",
+    "bedroomsandBath": 37,
+    "stories": 83,
+    "styles": "Rosaceae"
+  },
+  {
+    "name": "Glendale",
+    "area": "Nicol",
+    "size": 38,
+    "image": "http://dummyimage.com/150x100.png/ff4444/ffffff",
+    "price": "$7.08",
+    "bedroomsandBath": 38,
+    "stories": 8,
+    "styles": "Lamiaceae"
+  },
+  {
+    "name": "Russell",
+    "area": "Wait",
+    "size": 39,
+    "image": "http://dummyimage.com/220x100.png/ff4444/ffffff",
+    "price": "$3.91",
+    "bedroomsandBath": 39,
+    "stories": 10,
+    "styles": "Poaceae"
+  },
+  {
+    "name": "Mifflin",
+    "area": "Petronia",
+    "size": 40,
+    "image": "http://dummyimage.com/147x100.png/5fa2dd/ffffff",
+    "price": "$9.38",
+    "bedroomsandBath": 40,
+    "stories": 90,
+    "styles": "Solanaceae"
+  },
+  {
+    "name": "5th",
+    "area": "Justin",
+    "size": 41,
+    "image": "http://dummyimage.com/154x100.png/5fa2dd/ffffff",
+    "price": "$5.99",
+    "bedroomsandBath": 41,
+    "stories": 76,
+    "styles": "Campanulaceae"
+  },
+  {
+    "name": "Springview",
+    "area": "Demetris",
+    "size": 42,
+    "image": "http://dummyimage.com/170x100.png/5fa2dd/ffffff",
+    "price": "$2.85",
+    "bedroomsandBath": 42,
+    "stories": 11,
+    "styles": "Liliaceae"
+  },
+  {
+    "name": "Browning",
+    "area": "Hanan",
+    "size": 43,
+    "image": "http://dummyimage.com/130x100.png/5fa2dd/ffffff",
+    "price": "$5.92",
+    "bedroomsandBath": 43,
+    "stories": 51,
+    "styles": "Brassicaceae"
+  },
+  {
+    "name": "Golf Course",
+    "area": "Parsifal",
+    "size": 44,
+    "image": "http://dummyimage.com/133x100.png/dddddd/000000",
+    "price": "$0.52",
+    "bedroomsandBath": 44,
+    "stories": 77,
+    "styles": "Polemoniaceae"
+  },
+  {
+    "name": "Cody",
+    "area": "Larine",
+    "size": 45,
+    "image": "http://dummyimage.com/242x100.png/dddddd/000000",
+    "price": "$1.10",
+    "bedroomsandBath": 45,
+    "stories": 31,
+    "styles": "Violaceae"
+  },
+  {
+    "name": "Roth",
+    "area": "Kenna",
+    "size": 46,
+    "image": "http://dummyimage.com/133x100.png/dddddd/000000",
+    "price": "$2.74",
+    "bedroomsandBath": 46,
+    "stories": 18,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Kensington",
+    "area": "Maurise",
+    "size": 47,
+    "image": "http://dummyimage.com/185x100.png/dddddd/000000",
+    "price": "$9.08",
+    "bedroomsandBath": 47,
+    "stories": 4,
+    "styles": "Dipsacaceae"
+  },
+  {
+    "name": "Ridge Oak",
+    "area": "Irena",
+    "size": 48,
+    "image": "http://dummyimage.com/196x100.png/dddddd/000000",
+    "price": "$4.72",
+    "bedroomsandBath": 48,
+    "stories": 76,
+    "styles": "Scrophulariaceae"
+  },
+  {
+    "name": "Pearson",
+    "area": "Ricardo",
+    "size": 49,
+    "image": "http://dummyimage.com/130x100.png/cc0000/ffffff",
+    "price": "$8.58",
+    "bedroomsandBath": 49,
+    "stories": 88,
+    "styles": "Cyperaceae"
+  },
+  {
+    "name": "Atwood",
+    "area": "Kiel",
+    "size": 50,
+    "image": "http://dummyimage.com/186x100.png/5fa2dd/ffffff",
+    "price": "$1.84",
+    "bedroomsandBath": 50,
+    "stories": 83,
+    "styles": "Ericaceae"
+  },
+  {
+    "name": "Morningstar",
+    "area": "Harris",
+    "size": 51,
+    "image": "http://dummyimage.com/121x100.png/cc0000/ffffff",
+    "price": "$9.72",
+    "bedroomsandBath": 51,
+    "stories": 33,
+    "styles": "Malvaceae"
+  },
+  {
+    "name": "Dayton",
+    "area": "Harry",
+    "size": 52,
+    "image": "http://dummyimage.com/205x100.png/dddddd/000000",
+    "price": "$3.90",
+    "bedroomsandBath": 52,
+    "stories": 22,
+    "styles": "Solanaceae"
+  },
+  {
+    "name": "Milwaukee",
+    "area": "Bruce",
+    "size": 53,
+    "image": "http://dummyimage.com/237x100.png/5fa2dd/ffffff",
+    "price": "$1.34",
+    "bedroomsandBath": 53,
+    "stories": 1,
+    "styles": "Ranunculaceae"
+  },
+  {
+    "name": "Butternut",
+    "area": "Olivette",
+    "size": 54,
+    "image": "http://dummyimage.com/137x100.png/dddddd/000000",
+    "price": "$0.09",
+    "bedroomsandBath": 54,
+    "stories": 69,
+    "styles": "Verbenaceae"
+  },
+  {
+    "name": "Veith",
+    "area": "Camile",
+    "size": 55,
+    "image": "http://dummyimage.com/182x100.png/5fa2dd/ffffff",
+    "price": "$8.24",
+    "bedroomsandBath": 55,
+    "stories": 58,
+    "styles": "Lentibulariaceae"
+  },
+  {
+    "name": "Banding",
+    "area": "Corey",
+    "size": 56,
+    "image": "http://dummyimage.com/236x100.png/dddddd/000000",
+    "price": "$0.54",
+    "bedroomsandBath": 56,
+    "stories": 81,
+    "styles": "Dryopteridaceae"
+  },
+  {
+    "name": "Buell",
+    "area": "Claudianus",
+    "size": 57,
+    "image": "http://dummyimage.com/159x100.png/5fa2dd/ffffff",
+    "price": "$3.37",
+    "bedroomsandBath": 57,
+    "stories": 35,
+    "styles": "Chenopodiaceae"
+  },
+  {
+    "name": "Arkansas",
+    "area": "Ethe",
+    "size": 58,
+    "image": "http://dummyimage.com/229x100.png/dddddd/000000",
+    "price": "$5.47",
+    "bedroomsandBath": 58,
+    "stories": 44,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Atwood",
+    "area": "Duffy",
+    "size": 59,
+    "image": "http://dummyimage.com/157x100.png/ff4444/ffffff",
+    "price": "$5.15",
+    "bedroomsandBath": 59,
+    "stories": 73,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Forest Dale",
+    "area": "Kermy",
+    "size": 60,
+    "image": "http://dummyimage.com/239x100.png/dddddd/000000",
+    "price": "$7.72",
+    "bedroomsandBath": 60,
+    "stories": 73,
+    "styles": "Grimmiaceae"
+  },
+  {
+    "name": "Golf Course",
+    "area": "Curry",
+    "size": 61,
+    "image": "http://dummyimage.com/250x100.png/ff4444/ffffff",
+    "price": "$2.41",
+    "bedroomsandBath": 61,
+    "stories": 75,
+    "styles": "Arthoniaceae"
+  },
+  {
+    "name": "Basil",
+    "area": "Pearla",
+    "size": 62,
+    "image": "http://dummyimage.com/142x100.png/ff4444/ffffff",
+    "price": "$9.08",
+    "bedroomsandBath": 62,
+    "stories": 58,
+    "styles": "Malvaceae"
+  },
+  {
+    "name": "Troy",
+    "area": "Alikee",
+    "size": 63,
+    "image": "http://dummyimage.com/143x100.png/cc0000/ffffff",
+    "price": "$6.00",
+    "bedroomsandBath": 63,
+    "stories": 87,
+    "styles": "Fabaceae"
+  },
+  {
+    "name": "Bartillon",
+    "area": "Ellary",
+    "size": 64,
+    "image": "http://dummyimage.com/144x100.png/dddddd/000000",
+    "price": "$5.52",
+    "bedroomsandBath": 64,
+    "stories": 73,
+    "styles": "Papaveraceae"
+  },
+  {
+    "name": "Claremont",
+    "area": "Batsheva",
+    "size": 65,
+    "image": "http://dummyimage.com/196x100.png/ff4444/ffffff",
+    "price": "$7.95",
+    "bedroomsandBath": 65,
+    "stories": 90,
+    "styles": "Marattiaceae"
+  },
+  {
+    "name": "Lakeland",
+    "area": "Charlton",
+    "size": 66,
+    "image": "http://dummyimage.com/113x100.png/ff4444/ffffff",
+    "price": "$4.56",
+    "bedroomsandBath": 66,
+    "stories": 72,
+    "styles": "Fagaceae"
+  },
+  {
+    "name": "Cottonwood",
+    "area": "Ricard",
+    "size": 67,
+    "image": "http://dummyimage.com/132x100.png/cc0000/ffffff",
+    "price": "$9.84",
+    "bedroomsandBath": 67,
+    "stories": 77,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Burning Wood",
+    "area": "Hurlee",
+    "size": 68,
+    "image": "http://dummyimage.com/234x100.png/dddddd/000000",
+    "price": "$0.87",
+    "bedroomsandBath": 68,
+    "stories": 97,
+    "styles": "Styracaceae"
+  },
+  {
+    "name": "Talmadge",
+    "area": "Emylee",
+    "size": 69,
+    "image": "http://dummyimage.com/219x100.png/cc0000/ffffff",
+    "price": "$7.85",
+    "bedroomsandBath": 69,
+    "stories": 97,
+    "styles": "Scrophulariaceae"
+  },
+  {
+    "name": "Meadow Vale",
+    "area": "Rowen",
+    "size": 70,
+    "image": "http://dummyimage.com/244x100.png/cc0000/ffffff",
+    "price": "$3.45",
+    "bedroomsandBath": 70,
+    "stories": 25,
+    "styles": "Physciaceae"
+  },
+  {
+    "name": "Judy",
+    "area": "Zebadiah",
+    "size": 71,
+    "image": "http://dummyimage.com/239x100.png/cc0000/ffffff",
+    "price": "$1.60",
+    "bedroomsandBath": 71,
+    "stories": 7,
+    "styles": "Apiaceae"
+  },
+  {
+    "name": "Clemons",
+    "area": "Amandi",
+    "size": 72,
+    "image": "http://dummyimage.com/193x100.png/ff4444/ffffff",
+    "price": "$0.89",
+    "bedroomsandBath": 72,
+    "stories": 100,
+    "styles": "Acanthaceae"
+  },
+  {
+    "name": "Crest Line",
+    "area": "Lorrie",
+    "size": 73,
+    "image": "http://dummyimage.com/104x100.png/5fa2dd/ffffff",
+    "price": "$2.30",
+    "bedroomsandBath": 73,
+    "stories": 8,
+    "styles": "Pinaceae"
+  },
+  {
+    "name": "Mitchell",
+    "area": "Rosella",
+    "size": 74,
+    "image": "http://dummyimage.com/105x100.png/5fa2dd/ffffff",
+    "price": "$3.80",
+    "bedroomsandBath": 74,
+    "stories": 49,
+    "styles": "Cyperaceae"
+  },
+  {
+    "name": "South",
+    "area": "Agnes",
+    "size": 75,
+    "image": "http://dummyimage.com/104x100.png/cc0000/ffffff",
+    "price": "$2.31",
+    "bedroomsandBath": 75,
+    "stories": 24,
+    "styles": "Apiaceae"
+  },
+  {
+    "name": "Sutteridge",
+    "area": "Emmalynne",
+    "size": 76,
+    "image": "http://dummyimage.com/184x100.png/cc0000/ffffff",
+    "price": "$9.17",
+    "bedroomsandBath": 76,
+    "stories": 57,
+    "styles": "Lentibulariaceae"
+  },
+  {
+    "name": "Westridge",
+    "area": "Prentice",
+    "size": 77,
+    "image": "http://dummyimage.com/244x100.png/cc0000/ffffff",
+    "price": "$4.16",
+    "bedroomsandBath": 77,
+    "stories": 31,
+    "styles": "Araceae"
+  },
+  {
+    "name": "Swallow",
+    "area": "Gina",
+    "size": 78,
+    "image": "http://dummyimage.com/218x100.png/cc0000/ffffff",
+    "price": "$0.96",
+    "bedroomsandBath": 78,
+    "stories": 37,
+    "styles": "Polypodiaceae"
+  },
+  {
+    "name": "Anderson",
+    "area": "Bertram",
+    "size": 79,
+    "image": "http://dummyimage.com/137x100.png/dddddd/000000",
+    "price": "$8.49",
+    "bedroomsandBath": 79,
+    "stories": 50,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "American Ash",
+    "area": "Audrye",
+    "size": 80,
+    "image": "http://dummyimage.com/134x100.png/cc0000/ffffff",
+    "price": "$0.88",
+    "bedroomsandBath": 80,
+    "stories": 94,
+    "styles": "Pertusariaceae"
+  },
+  {
+    "name": "Truax",
+    "area": "Pauly",
+    "size": 81,
+    "image": "http://dummyimage.com/119x100.png/cc0000/ffffff",
+    "price": "$4.52",
+    "bedroomsandBath": 81,
+    "stories": 66,
+    "styles": "Bacidiaceae"
+  },
+  {
+    "name": "Prairieview",
+    "area": "George",
+    "size": 82,
+    "image": "http://dummyimage.com/184x100.png/cc0000/ffffff",
+    "price": "$6.94",
+    "bedroomsandBath": 82,
+    "stories": 43,
+    "styles": "Cyperaceae"
+  },
+  {
+    "name": "Coleman",
+    "area": "Phillipp",
+    "size": 83,
+    "image": "http://dummyimage.com/130x100.png/dddddd/000000",
+    "price": "$5.44",
+    "bedroomsandBath": 83,
+    "stories": 93,
+    "styles": "Asteraceae"
+  },
+  {
+    "name": "Toban",
+    "area": "Stanford",
+    "size": 84,
+    "image": "http://dummyimage.com/178x100.png/dddddd/000000",
+    "price": "$7.04",
+    "bedroomsandBath": 84,
+    "stories": 91,
+    "styles": "Lamiaceae"
+  },
+  {
+    "name": "Morning",
+    "area": "Billy",
+    "size": 85,
+    "image": "http://dummyimage.com/114x100.png/ff4444/ffffff",
+    "price": "$0.59",
+    "bedroomsandBath": 85,
+    "stories": 59,
+    "styles": "Poaceae"
+  },
+  {
+    "name": "Vahlen",
+    "area": "Lou",
+    "size": 86,
+    "image": "http://dummyimage.com/136x100.png/cc0000/ffffff",
+    "price": "$7.42",
+    "bedroomsandBath": 86,
+    "stories": 91,
+    "styles": "Fabaceae"
+  },
+  {
+    "name": "Heath",
+    "area": "Ericka",
+    "size": 87,
+    "image": "http://dummyimage.com/230x100.png/ff4444/ffffff",
+    "price": "$1.69",
+    "bedroomsandBath": 87,
+    "stories": 97,
+    "styles": "Polytrichaceae"
+  },
+  {
+    "name": "Mendota",
+    "area": "Casandra",
+    "size": 88,
+    "image": "http://dummyimage.com/238x100.png/dddddd/000000",
+    "price": "$5.34",
+    "bedroomsandBath": 88,
+    "stories": 34,
+    "styles": "Cyperaceae"
+  },
+  {
+    "name": "Iowa",
+    "area": "Retha",
+    "size": 89,
+    "image": "http://dummyimage.com/145x100.png/dddddd/000000",
+    "price": "$6.66",
+    "bedroomsandBath": 89,
+    "stories": 51,
+    "styles": "Bryaceae"
+  },
+  {
+    "name": "Heffernan",
+    "area": "Zollie",
+    "size": 90,
+    "image": "http://dummyimage.com/171x100.png/cc0000/ffffff",
+    "price": "$2.45",
+    "bedroomsandBath": 90,
+    "stories": 28,
+    "styles": "Commelinaceae"
+  },
+  {
+    "name": "Express",
+    "area": "Annadiana",
+    "size": 91,
+    "image": "http://dummyimage.com/221x100.png/5fa2dd/ffffff",
+    "price": "$0.55",
+    "bedroomsandBath": 91,
+    "stories": 9,
+    "styles": "Fabaceae"
+  },
+  {
+    "name": "Victoria",
+    "area": "Xena",
+    "size": 92,
+    "image": "http://dummyimage.com/166x100.png/dddddd/000000",
+    "price": "$9.71",
+    "bedroomsandBath": 92,
+    "stories": 66,
+    "styles": "Lecideaceae"
+  },
+  {
+    "name": "Crowley",
+    "area": "Mano",
+    "size": 93,
+    "image": "http://dummyimage.com/156x100.png/cc0000/ffffff",
+    "price": "$7.06",
+    "bedroomsandBath": 93,
+    "stories": 67,
+    "styles": "Ranunculaceae"
+  },
+  {
+    "name": "Armistice",
+    "area": "Alexi",
+    "size": 94,
+    "image": "http://dummyimage.com/171x100.png/dddddd/000000",
+    "price": "$7.58",
+    "bedroomsandBath": 94,
+    "stories": 12,
+    "styles": "Polygonaceae"
+  },
+  {
+    "name": "Quincy",
+    "area": "Johann",
+    "size": 95,
+    "image": "http://dummyimage.com/201x100.png/dddddd/000000",
+    "price": "$0.20",
+    "bedroomsandBath": 95,
+    "stories": 5,
+    "styles": "Viscaceae"
+  },
+  {
+    "name": "3rd",
+    "area": "Dre",
+    "size": 96,
+    "image": "http://dummyimage.com/154x100.png/dddddd/000000",
+    "price": "$6.37",
+    "bedroomsandBath": 96,
+    "stories": 13,
+    "styles": "Caryophyllaceae"
+  },
+  {
+    "name": "Northland",
+    "area": "Florentia",
+    "size": 97,
+    "image": "http://dummyimage.com/195x100.png/ff4444/ffffff",
+    "price": "$2.37",
+    "bedroomsandBath": 97,
+    "stories": 49,
+    "styles": "Saxifragaceae"
+  },
+  {
+    "name": "Spohn",
+    "area": "Paten",
+    "size": 98,
+    "image": "http://dummyimage.com/208x100.png/dddddd/000000",
+    "price": "$6.69",
+    "bedroomsandBath": 98,
+    "stories": 38,
+    "styles": "Cyperaceae"
+  },
+  {
+    "name": "Sugar",
+    "area": "Leyla",
+    "size": 99,
+    "image": "http://dummyimage.com/153x100.png/5fa2dd/ffffff",
+    "price": "$4.21",
+    "bedroomsandBath": 99,
+    "stories": 95,
+    "styles": "Fabaceae"
+  },
+  {
+    "name": "Gulseth",
+    "area": "Klarrisa",
+    "size": 100,
+    "image": "http://dummyimage.com/152x100.png/dddddd/000000",
+    "price": "$1.38",
+    "bedroomsandBath": 100,
+    "stories": 56,
+    "styles": "Poaceae"
+  }
+]

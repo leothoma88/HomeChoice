@@ -1,11 +1,11 @@
 import React from "react";
 
 const Footer = () => {
-    return (
-      <div >
-          <div className="h-screen bg-[#0047AC]"></div>   
-      </div>
-    );
-  };
+  return (
+    <div>
+      <footer className=".flex align-middle"> 🏡 Home Choice © 2022 </footer>
+    </div>
+  );
+};
 
-  export default Footer;
+export default Footer;

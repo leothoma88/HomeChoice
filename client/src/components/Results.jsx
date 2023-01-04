@@ -65,7 +65,7 @@ function Results() {
   //This sets the returned setnumber as number
   function mortgageNumber(){
     setNumber(data.results[3].list_price)
-    return <Mortgage apiValue={number} />
+    return <Mortgage number={number} />
 
   }
  
@@ -119,7 +119,7 @@ function Results() {
       
           </div>
           <div className="flex flex-col justify-center sm:flex-row ">
-          <Link to="/mortgage"><button onClick={mortgageNumber} className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <Link to="/mortgage"> <button onClick={mortgageNumber} className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               This is the one!
             </button></Link>
             <button  className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

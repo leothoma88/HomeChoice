@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 
 const Mortgage = (props) => {
   const [loanAmount, setLoanAmount] = useState(props.number);
-  const [interestRate, setInterestRate] = useState(3.75);
-  const [loanTerm, setLoanTerm] = useState(0);
+  const [interestRate, setInterestRate] = useState(7);
+  const [loanTerm, setLoanTerm] = useState(30);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
 
   function handleCalculate() {
@@ -23,16 +23,16 @@ const Mortgage = (props) => {
   return (
     <div>
       <div className="flex justify-center items-center">
-        <div className="rounded-lg m-20 h-2/3 w-2/3  grid grid-cols-1 sm:grid-cols-2">
+        <div className="rounded-lg m-20 h-2/3 w-2/3  flex justify-center items-center">
         <div>
       <h1 className="bg-[#715959] text-white font-bold my-3">Mortgage Calculator</h1>
       <form>
-        <div className="bg-[#715959] font-bold text-white">
+        
         Loan Amount: $<input type="number" value={loanAmount} onChange={e => setLoanAmount(e.target.value)} /><br />
         Interest Rate: <input type="number" value={interestRate} onChange={e => setInterestRate(e.target.value)} /><br />
         Loan Term (in years): <input type="number" value={loanTerm} onChange={e => setLoanTerm(e.target.value)} /><br />
         
-        </div>
+        
         <input className="bg-[#715959] my-3 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" value="Calculate" onClick={handleCalculate} />
 
 

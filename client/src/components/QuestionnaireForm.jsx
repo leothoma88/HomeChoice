@@ -3,8 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function QuestionnaireForm(props) {
 
-  const [formCompleted, setFormCompleted] = useState(false);
-//
+  
 
 
 
@@ -23,15 +22,6 @@ const handleButton2Click = () => {
 }
   
 
-  const [allAnswersFilledIn, setAllAnswersFilledIn] = useState(false);
-  const submitty = useRef(null)
-
-  useEffect(() => {
-    // const form = document.querySelector('submitbutton');
-    // const submitButton = form.querySelector('button[type="submit"]'); 
-    
-    submitty.disabled = !allAnswersFilledIn;
-  }, [allAnswersFilledIn]);
 
 
 
@@ -40,14 +30,21 @@ const handleButton2Click = () => {
 
   //store answers
   const [formData, setFormData] = useState({});
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const form = document.querySelector('form');
+    setIsSubmitDisabled(!form.checkValidity());
+  }, [formData]);
+
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((formData) => ({ ...formData, [name]: value }));
-    setAllAnswersFilledIn(true)
-    const allPagesComplete = true;
-    setFormCompleted(allPagesComplete)
+    
+ 
+    
    
   };
 
@@ -64,9 +61,9 @@ const handleButton2Click = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     navigate("/results", { state: { formData } });
-    setFormCompleted(true)
+   
 
-    // submit the form data to the server or do something else with it
+    
   };
 
   return (
@@ -520,7 +517,7 @@ const handleButton2Click = () => {
                 Previous
               </button>
               <button style={{ display: showButton1 ? 'block' : 'none' }}
-        onClick={handleButton1Click} className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"type="submit" ref={submitty} disabled={!formCompleted}>Submit</button>
+        onClick={handleButton1Click} className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"type="submit"  disabled={isSubmitDisabled}>Submit</button>
             <Link to="/results"><button style={{ display: showButton2 ? 'block' : 'none' }}
         onClick={handleButton2Click} className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"type="submit">See My Options</button>
         </Link>

@@ -1,18 +1,28 @@
-import QuestionnaireForm from "./QuestionnaireForm";
+
 import React,{useState, useEffect} from "react";
+import Mortgage from "./Mortgage"
 
 import { json, useLocation } from "react-router-dom";
 import Home from "../assets/pexels-binyamin-mellish-106399.jpg";
 import { Link } from "react-router-dom";
-import { useQuery, useMutation } from "@apollo/client";
-// import { QUERY_HOMES } from '../utils/queries';
+
+
 
 function Results() {
   const location = useLocation();
   const formData = location.state.formData;
 
-  //Hook used to format data
   
+
+
+  //This takes mortgage number and puts it in a hook
+
+  const [number, setNumber] = useState(0);
+
+  //Hook used to go through different houses
+  // const [index, setIndex] = useState(1);
+
+  //Hook used to format data
   const [data2, setData] = useState(null);
 
   //Pull API DATA
@@ -33,8 +43,10 @@ function Results() {
     }, []);
 
   
-
-
+//On click function that lets you navigate through an array of data
+    // function handleNextClick() {
+    //   setIndex((index + 1) % data.length);
+    // }
 
 
 
@@ -48,19 +60,38 @@ function Results() {
 //This break down the data to an object
   const { status,data } = data2 || {};
 
-  console.log(data.results[1].primary_photo.href,"What??")
+  // console.log(data.results[1].primary_photo.href,"What??")
+
+  //This sets the returned setnumber as number
+  function mortgageNumber(){
+    setNumber(data.results[3].list_price)
+    return <Mortgage apiValue={number} />
+
+  }
  
 
   return (
     <div className="results flex justify-center items-center">
       <div className="rounded-lg m-20 h-1/2 w-2/3">
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
-          <img className="homeimage" alt="homeimage" src={data.results[1].primary_photo.href}></img>
+          {data ? (
+            <div>
+          <img className="homeimage" alt="homeimage" src={data.results[3].primary_photo.href|| {Home}}></img>
+            </div>):(
+           <p>Loading...</p>
+            )}
         </div>
+        
         <div className="grid grid-col-1">
           <div className=" font-extrabold  grid flex justify-center">
             <h2 className="text-xl">Price:</h2>
-            <p className="bg-white text-amber-300 text-2xl">{data.results[1].list_price}</p>
+            <div>
+            {data ? (
+              <p className="bg-white text-amber-300 text-2xl">{data.results[3].list_price}</p>
+            ) : (
+              <p>Loading...</p>
+            )}
+            </div>
             <br/>
             <br/>
             <h1>Your Criteria:</h1>
@@ -88,10 +119,10 @@ function Results() {
       
           </div>
           <div className="flex flex-col justify-center sm:flex-row ">
-            <button className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <Link to="/mortgage"><button onClick={mortgageNumber} className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               This is the one!
-            </button>
-            <button className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            </button></Link>
+            <button  className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Next One
             </button>
             <Link to="/questionnaire">

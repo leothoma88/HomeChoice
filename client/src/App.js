@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <div className="App h-screen" style={style}>
+    <div className="App" style={style}>
       <BrowserRouter>
         <Header />
         <Routes>

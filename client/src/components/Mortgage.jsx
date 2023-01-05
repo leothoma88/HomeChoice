@@ -3,8 +3,12 @@ import React, { useState } from 'react';
 
 
 
-const Mortgage = (props) => {
-  const [loanAmount, setLoanAmount] = useState(props.number);
+const Mortgage = ({number}) => {
+
+
+  
+  const [loanAmount, setLoanAmount] = useState(number);
+  console.log(number,"trippy") 
   const [interestRate, setInterestRate] = useState(7);
   const [loanTerm, setLoanTerm] = useState(30);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
@@ -49,7 +53,7 @@ const Mortgage = (props) => {
       </div>
 
       </form>
-      <p className="bg-[#715959] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Monthly Payment: $<span>{monthlyPayment}</span></p>
+      <p className="bg-[#715959] text-white font-bold py-2 px-4 rounded">Monthly Payment: $<span>{monthlyPayment}</span></p>
     </div>
           
         </div>

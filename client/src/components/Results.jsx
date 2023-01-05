@@ -17,7 +17,7 @@ function Results() {
 
   //This takes mortgage number and puts it in a hook
 
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(null);
 
   //Hook used to go through different houses
   // const [index, setIndex] = useState(1);
@@ -29,7 +29,7 @@ function Results() {
     useEffect(() => {
       async function fetchData() {
         const response = await fetch(`https://us-real-estate.p.rapidapi.com/for-sale?offset=0&limit=42&state_code=GA&city=Atlanta&sort=newest&beds_min=3&baths_min=2&property_type=multi_family&home_size_min=1200&stories=single`, {
-          method: 'GET',
+          
           headers: {
             'X-RapidAPI-Key': '72ddbc841bmsh8b56aa2a6ef50e7p1e74f1jsn17c984253b3e',
             'X-RapidAPI-Host': 'us-real-estate.p.rapidapi.com',
@@ -38,12 +38,18 @@ function Results() {
         const json = await response.json();
         console.log(json,"RIGHT HERE")
         setData(json);
+        const { status,data } = json 
+        setNumber(data.results[3].list_price)
+        
       }
+      
+      
       fetchData();
     }, []);
 
+
   
-//On click function that lets you navigate through an array of data
+// On click function that lets you navigate through an array of data
     // function handleNextClick() {
     //   setIndex((index + 1) % data.length);
     // }
@@ -60,16 +66,23 @@ function Results() {
 //This break down the data to an object
   const { status,data } = data2 || {};
 
+   
+
+
   // console.log(data.results[1].primary_photo.href,"What??")
+
+  
 
   //This sets the returned setnumber as number
   function mortgageNumber(){
-    setNumber(data.results[3].list_price)
-    return <Mortgage number={number} />
+    
+    <Mortgage number={number} />
 
-  }
+  } 
+
+  
  
-
+console.log(number,"HEY")
   return (
     <div className="results flex justify-center items-center">
       <div className="rounded-lg m-20 h-1/2 w-2/3">
@@ -81,7 +94,6 @@ function Results() {
            <p>Loading...</p>
             )}
         </div>
-        
         <div className="grid grid-col-1">
           <div className=" font-extrabold  grid flex justify-center">
             <h2 className="text-xl">Price:</h2>
@@ -116,10 +128,11 @@ function Results() {
             </p>
             <n />
             
+            
       
           </div>
           <div className="flex flex-col justify-center sm:flex-row ">
-          <Link to="/mortgage"> <button onClick={mortgageNumber} className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <Link to="/mortgage"><button onClick={mortgageNumber} className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               This is the one!
             </button></Link>
             <button  className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

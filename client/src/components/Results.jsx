@@ -12,8 +12,14 @@ function Results() {
   const location = useLocation();
   const formData = location.state.formData;
 
-  
+  //Visibility 
+  const [isVisible, setIsVisible] = useState(true);
+  const [isSecondVisible, setIsSecondVisible] = React.useState(false);
 
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+    setIsSecondVisible(!isSecondVisible);
+  };
 
   //This takes mortgage number and puts it in a hook
 
@@ -71,21 +77,13 @@ function Results() {
 
   // console.log(data.results[1].primary_photo.href,"What??")
 
-  
-
-  //This sets the returned setnumber as number
-  function mortgageNumber(){
-    
-    <Mortgage number={number} />
-
-  } 
+  console.log(number,"HEY")
 
   
- 
-console.log(number,"HEY")
+
   return (
     <div className="results flex justify-center items-center">
-      <div className="rounded-lg m-20 h-1/2 w-2/3">
+      <div style={{ display: isVisible ? 'block' : 'none' }} className="rounded-lg m-20 h-1/2 w-2/3">
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
           {data ? (
             <div>
@@ -125,6 +123,8 @@ console.log(number,"HEY")
             <p>Style : {formData.style}</p>
             <n />
             <p>Floors: {formData.stories} 
+
+            
             </p>
             <n />
             
@@ -132,9 +132,9 @@ console.log(number,"HEY")
       
           </div>
           <div className="flex flex-col justify-center sm:flex-row ">
-          <Link to="/mortgage"><button onClick={mortgageNumber} className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button onClick={toggleVisibility} className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               This is the one!
-            </button></Link>
+            </button>
             <button  className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Next One
             </button>
@@ -145,6 +145,9 @@ console.log(number,"HEY")
             </Link>
           </div>
         </div>
+      </div>
+      <div style={{ display: isSecondVisible ? 'block' : 'none' }}>
+      <Mortgage number={number} />
       </div>
     </div>
   );

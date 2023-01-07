@@ -4,6 +4,10 @@
   --teritary: rgba(255, 255, 180, 0.778);
   --text: #715959;
 }
+.root{
+  height: 100vh;
+}
+
 
 .App {
   text-align: center;

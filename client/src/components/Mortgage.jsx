@@ -9,7 +9,7 @@ const Mortgage = (props) => {
   const {number} =props
   
   const [loanAmount, setLoanAmount] = useState(number);
-  console.log(number,"trippy") 
+  console.log(number,"number from prop") 
   const [interestRate, setInterestRate] = useState(0);
   const [loanTerm, setLoanTerm] = useState(0);
   const [monthlyPayment, setMonthlyPayment] = useState(0);

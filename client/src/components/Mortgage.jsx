@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import Email from "./Email"
 
 
 
@@ -46,9 +47,7 @@ const Mortgage = (props) => {
 
 
         <div className="my-3 mb-8 top-0 flex justify-center items-center">
-      <button className="mx-1.5 bg-[#715959] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Contact Lender!
-          </button>
+          <Email/>
           <br/>
         <Link to="/questionnaire">
           <button className=" bg-[#715959] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">

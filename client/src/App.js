@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Main from "./components/Main";
+import Mortgage from "./components/Mortgage";
 import QuestionnaireForm from "./components/QuestionnaireForm";
 import Results from "./components/Results";
 import WelcomePage from "./components/WelcomePage";
@@ -33,13 +33,14 @@ function App() {
   };
 
   return (
-    <div className="App h-screen" style={style}>
+    <div className="App" style={style}>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<WelcomePage />}></Route>
           <Route path="/questionnaire" element={<QuestionnaireForm />}></Route>
           <Route path="/results" element={<Results />}></Route>
+          <Route path="/mortgage" element={<Mortgage />}></Route>
         </Routes>
 
         <Footer />

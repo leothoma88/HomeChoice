@@ -1,39 +1,33 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function QuestionnaireForm(props) {
-
   const [formCompleted, setFormCompleted] = useState(false);
-//
+  //
 
+  //Buttons dissapear and reappear
+  const [showButton1, setShowButton1] = useState(true);
+  const [showButton2, setShowButton2] = useState(false);
 
+  const handleButton1Click = () => {
+    setShowButton1(false);
+    setShowButton2(true);
+  };
 
- //Buttons dissapear and reappear
-const [showButton1, setShowButton1] = useState(true);
-const [showButton2, setShowButton2] = useState(false);
-
-const handleButton1Click = () => {
-  setShowButton1(false);
-  setShowButton2(true);
-}
-
-const handleButton2Click = () => {
-  setShowButton1(true);
-  setShowButton2(false);
-}
-  
+  const handleButton2Click = () => {
+    setShowButton1(true);
+    setShowButton2(false);
+  };
 
   const [allAnswersFilledIn, setAllAnswersFilledIn] = useState(false);
-  const submitty = useRef(null)
+  const submitty = useRef(null);
 
   useEffect(() => {
     // const form = document.querySelector('submitbutton');
-    // const submitButton = form.querySelector('button[type="submit"]'); 
-    
+    // const submitButton = form.querySelector('button[type="submit"]');
+
     submitty.disabled = !allAnswersFilledIn;
   }, [allAnswersFilledIn]);
-
-
 
   // state variable to track the current step
   const [currentStep, setCurrentStep] = useState(1);
@@ -45,10 +39,9 @@ const handleButton2Click = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((formData) => ({ ...formData, [name]: value }));
-    setAllAnswersFilledIn(true)
+    setAllAnswersFilledIn(true);
     const allPagesComplete = true;
-    setFormCompleted(allPagesComplete)
-   
+    setFormCompleted(allPagesComplete);
   };
 
   // event handler for moving to the next step
@@ -63,8 +56,9 @@ const handleButton2Click = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("form data", formData);
     navigate("/results", { state: { formData } });
-    setFormCompleted(true)
+    setFormCompleted(true);
 
     // submit the form data to the server or do something else with it
   };
@@ -519,12 +513,27 @@ const handleButton2Click = () => {
               >
                 Previous
               </button>
-              <button style={{ display: showButton1 ? 'block' : 'none' }}
-        onClick={handleButton1Click} className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"type="submit" ref={submitty} disabled={!formCompleted}>Submit</button>
-            <Link to="/results"><button style={{ display: showButton2 ? 'block' : 'none' }}
-        onClick={handleButton2Click} className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"type="submit">See My Options</button>
-        </Link>
-{/* 
+              <button
+                style={{ display: showButton1 ? "block" : "none" }}
+                onClick={handleButton1Click}
+                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                type="submit"
+                ref={submitty}
+                disabled={!formCompleted}
+              >
+                Submit
+              </button>
+              <Link to="/results">
+                <button
+                  style={{ display: showButton2 ? "block" : "none" }}
+                  onClick={handleButton2Click}
+                  className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  type="submit"
+                >
+                  See My Options
+                </button>
+              </Link>
+              {/* 
               <Link to="/results">
               <button
               ref={submitty}
@@ -537,7 +546,6 @@ const handleButton2Click = () => {
                 Submit
               </button>
               </Link> */}
-              
             </div>
           </div>
         )}

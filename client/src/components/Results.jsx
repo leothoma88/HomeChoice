@@ -52,23 +52,22 @@ function Results() {
     const json = await response.json();
     console.log("json..", json);
     const { status, data } = json;
-    
+
     const houseData = data.results;
-    
+
     setHouseArray(houseData);
   }
-  
-  console.log("houseData", houseArray);
+
+  console.log("house Arry", houseArray);
   //Pull API DATA
   useEffect(() => {
     fetchData();
   }, []);
 
   const handleNext = () => {
-    console.log("house", houseArray[0]);
-    let index = 0;
-    setNumber(houseArray[0].list_price);
-    index++;
+    // let index = 0;
+    setNumber(number + 1);
+    // index++;
   };
 
   // On click function that lets you navigate through an array of data
@@ -88,7 +87,7 @@ function Results() {
               <img
                 className="homeimage"
                 alt="homeimage"
-                src={houseArray[number].primary_photo.href || { Home }}
+                src={houseArray[number]?.primary_photo.href || { Home }}
               ></img>
             </div>
           ) : (
@@ -114,21 +113,21 @@ function Results() {
               <br />
             </p>
             <p>First: {formData.fname}</p>
-            <n />
+            
             <p>Last: {formData.lname}</p>
-            <n />
+            <br />
             <p>Email: {formData.email}</p>
-            <n />
+            <br />
             <p>Number: {formData.phoneNumber}</p>
-            <n />
+            <br />
             <p>Bed Minimum: {formData.bedroomsandBath}</p>
-            <n />
+            <br />
             <p>Sq Fr: {formData.space}</p>
-            <n />
+            <br />
             <p>Style : {formData.style}</p>
-            <n />
+            <br />
             <p>Floors: {formData.stories}</p>
-            <n />
+            <br />
           </div>
           <div className="flex flex-col justify-center sm:flex-row ">
             <button

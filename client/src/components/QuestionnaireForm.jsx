@@ -57,7 +57,6 @@ function QuestionnaireForm(props) {
     !_.isEmpty(formData.lname) &&
     !_.isEmpty(formData.phoneNumber) &&
     !_.isEmpty(formData.space) &&
-    !_.isEmpty(formData.stories) &&
     !_.isEmpty(formData.style);
 
   useEffect(() => {
@@ -70,7 +69,7 @@ function QuestionnaireForm(props) {
   console.log("verify", verify());
 
   return (
-    <div className="flex justify-center sm:flex-wrap">
+    <div className="h-screen flex justify-center sm:flex-wrap">
       <form
         className="question-form m-20 h-2/3 w-1/2 rounded-md"
         onSubmit={handleSubmit}

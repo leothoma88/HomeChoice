@@ -84,7 +84,7 @@ function Results() {
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
           {houseArray ? (
             <div>
-              Pricessssssss: {houseArray[number]?.list_price}
+              Price: ${houseArray[number]?.list_price}
               <img
                 className="homeimage"
                 alt="homeimage"
@@ -95,24 +95,31 @@ function Results() {
             <p>Loading...</p>
           )}
         </div>
-        <div className="grid grid-col-1">
+        <div className="flex flex-col justify-center sm:flex-row ">
+          <button
+            onClick={() => toggleVisibility(houseArray[number].list_price)}
+            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            This is the one!
+          </button>
+          <button
+            onClick={handleNext}
+            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Next One
+          </button>
+          <Link to="/questionnaire">
+            <button className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Start Over
+            </button>
+          </Link>
+        </div>
+        <div className="result-criteria grid grid-col-1">
           <div className=" font-extrabold  grid flex justify-center">
-            <h2 className="text-xl">Price:</h2>
-            <div>
-              {/* {json ? (
-                <p className="bg-white text-amber-300 text-2xl">
-                  {houseArray[3].list_price}
-                </p>
-              ) : (
-                <p>Loading...</p>
-              )} */}
-            </div>
             <br />
             <br />
-            <h1>Your Criteria:</h1>
-            <p>
-              <br />
-            </p>
+            <h3>Your Criteria:</h3>
+            <p>${houseArray[number]?.list_price}</p>
             <p>First: {formData.fname}</p>
 
             <p>Last: {formData.lname}</p>
@@ -127,27 +134,8 @@ function Results() {
             <br />
             <p>Style : {formData.style}</p>
             <br />
-            <p>Floors: {formData.stories}</p>
+            <p>Floors: {formData.story}</p>
             <br />
-          </div>
-          <div className="flex flex-col justify-center sm:flex-row ">
-            <button
-              onClick={() => toggleVisibility(houseArray[number].list_price)}
-              className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              This is the one!
-            </button>
-            <button
-              onClick={handleNext}
-              className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Next One
-            </button>
-            <Link to="/questionnaire">
-              <button className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Start Over
-              </button>
-            </Link>
           </div>
         </div>
       </div>

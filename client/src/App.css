@@ -1,14 +1,14 @@
 :root {
   --primary: #cfb57c;
   --secondary: rgba(204, 225, 252, 0.877);
-  --teritary: rgba(255, 255, 180, 0.778);
+  --teritary: rgba(155, 207, 102, 0.778);
   --text: #715959;
 }
 .root {
   height: 100vh;
 }
 
-.welcome-box{
+.welcome-box {
   height: 90vh;
 }
 
@@ -20,6 +20,13 @@
   /* height: 100vh; */
 }
 
+button {
+  background-color: var(--teritary);
+  color: var(--text);
+}
+button:hover {
+  background-color: rgba(213, 247, 179, 0.778);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -48,8 +55,13 @@
 
 .question-form {
   background-color: rgba(88, 85, 85, 0.627);
-
+  font-size: calc(1vw + 5px);
   backdrop-filter: blur(1);
+  height: calc(70vh + 10px);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .results {
@@ -59,6 +71,15 @@
   background-position: left;
 }
 
+.prompt {
+  font-size: calc(1vw + 16px);
+  color: var(--teritary);
+}
+
+.homeimage {
+  /* width: 400px; */
+  object-fit: cover;
+}
 .homeimage::before {
   content: "";
   position: absolute;
@@ -77,6 +98,17 @@ header {
   background-color: var(--secondary);
   font-size: 3rem;
   color: var(--text);
+}
+
+.results {
+  color: var(--secondary);
+}
+.criteria {
+  font-size: 1.4rem;
+  color: var(--secondary);
+}
+.result-criteria {
+  background-color: grey;
 }
 
 footer {

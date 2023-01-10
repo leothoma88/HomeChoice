@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import _ from "lodash";
 function QuestionnaireForm(props) {
   //Buttons dissapear and reappear
   const [showButton1, setShowButton1] = useState(true);
@@ -11,10 +11,10 @@ function QuestionnaireForm(props) {
     setShowButton2(true);
   };
 
-  const handleButton2Click = () => {
-    setShowButton1(true);
-    setShowButton2(false);
-  };
+  // const handleButton2Click = () => {
+  //   setShowButton1(true);
+  //   setShowButton2(false);
+  // };
 
   // state variable to track the current step
   const [currentStep, setCurrentStep] = useState(1);
@@ -24,10 +24,10 @@ function QuestionnaireForm(props) {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const form = document.querySelector("form");
-    setIsSubmitDisabled(!form.checkValidity());
-  }, [formData]);
+  // useEffect(() => {
+  //   const form = document.querySelector("form");
+  //   setIsSubmitDisabled(!form.checkValidity());
+  // }, [formData]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -46,9 +46,28 @@ function QuestionnaireForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("form data", formData);
     navigate("/results", { state: { formData } });
   };
+
+  const verify = () =>
+    !_.isEmpty(formData.area) &&
+    !_.isEmpty(formData.bedroomsandBath) &&
+    !_.isEmpty(formData.email) &&
+    !_.isEmpty(formData.fname) &&
+    !_.isEmpty(formData.lname) &&
+    !_.isEmpty(formData.phoneNumber) &&
+    !_.isEmpty(formData.space) &&
+    !_.isEmpty(formData.stories) &&
+    !_.isEmpty(formData.style);
+
+  useEffect(() => {
+    if (verify()) {
+      setIsSubmitDisabled(false);
+    }
+  }, [formData]);
+
+  console.log("form data", formData);
+  console.log("verify", verify());
 
   return (
     <div className="flex justify-center sm:flex-wrap">
@@ -501,7 +520,7 @@ function QuestionnaireForm(props) {
                 Previous
               </button>
               <button
-                style={{ display: showButton1 ? "block" : "none" }}
+                // style={{ display: showButton1 ? "block" : "none" }}
                 onClick={handleButton1Click}
                 className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                 type="submit"
@@ -509,7 +528,7 @@ function QuestionnaireForm(props) {
               >
                 Submit
               </button>
-              <Link to="/results">
+              {/* <Link to="/results">
                 <button
                   style={{ display: showButton2 ? "block" : "none" }}
                   onClick={handleButton2Click}
@@ -518,7 +537,7 @@ function QuestionnaireForm(props) {
                 >
                   See My Options
                 </button>
-              </Link>
+              </Link> */}
               {/* 
               <Link to="/results">
               <button

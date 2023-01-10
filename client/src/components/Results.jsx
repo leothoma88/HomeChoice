@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Results() {
   const location = useLocation();
-  const formData = location.state.formData;
+  const formData = location.state.formData || {};
 
   const {
     area,
@@ -23,15 +23,16 @@ function Results() {
 
   //Visibility
   const [isVisible, setIsVisible] = useState(true);
-  const [isSecondVisible, setIsSecondVisible] = React.useState(false);
+  const [isSecondVisible, setIsSecondVisible] = useState(false);
+  const [currentProp, setCurrentProp] = useState(0);
 
-  const toggleVisibility = () => {
+  const toggleVisibility = (property) => {
     setIsVisible(!isVisible);
     setIsSecondVisible(!isSecondVisible);
+    setCurrentProp(property);
   };
 
   //This takes mortgage number and puts it in a hook
-
   const [number, setNumber] = useState(0);
 
   //Hook used to go through different houses
@@ -113,7 +114,7 @@ function Results() {
               <br />
             </p>
             <p>First: {formData.fname}</p>
-            
+
             <p>Last: {formData.lname}</p>
             <br />
             <p>Email: {formData.email}</p>
@@ -131,7 +132,7 @@ function Results() {
           </div>
           <div className="flex flex-col justify-center sm:flex-row ">
             <button
-              onClick={toggleVisibility}
+              onClick={() => toggleVisibility(houseArray[number].list_price)}
               className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               This is the one!
@@ -151,7 +152,7 @@ function Results() {
         </div>
       </div>
       <div style={{ display: isSecondVisible ? "block" : "none" }}>
-        <Mortgage number={number} />
+        <Mortgage number={currentProp} />
       </div>
     </div>
   );

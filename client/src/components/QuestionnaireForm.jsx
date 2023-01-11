@@ -57,7 +57,6 @@ function QuestionnaireForm(props) {
     !_.isEmpty(formData.lname) &&
     !_.isEmpty(formData.phoneNumber) &&
     !_.isEmpty(formData.space) &&
-    !_.isEmpty(formData.stories) &&
     !_.isEmpty(formData.style);
 
   useEffect(() => {
@@ -70,14 +69,14 @@ function QuestionnaireForm(props) {
   console.log("verify", verify());
 
   return (
-    <div className="flex justify-center sm:flex-wrap">
+    <div className="h-screen flex justify-center sm:flex-wrap">
       <form
-        className="question-form m-20 h-2/3 w-1/2 rounded-md"
+        className="question-form m-20 h-2/3 w-1/2 rounded-md "
         onSubmit={handleSubmit}
       >
         {/* first step of the questionnaire */}
         {currentStep === 1 && (
-          <div className="flex flex-wrap grid flex justify-center m-10 font-extrabold text-center">
+          <div className="flex flex-wrap grid flex justify-center m-8 font-extrabold text-center">
             <label className="font-sans" htmlFor="name">
               First Name:
             </label>
@@ -116,7 +115,7 @@ function QuestionnaireForm(props) {
             />
             <div className="mt-6 flex justify-center">
               <button
-                className=" bg-[#1497D4]  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="button font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -127,9 +126,11 @@ function QuestionnaireForm(props) {
         )}
         {/* second step of the questionnaire */}
         {currentStep === 2 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-10 rounded-2xl">
-            <h2>Which one of these fits your needs best?</h2>
-            <div className="font-extrabold text-center grid flex justify-center m-10">
+          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8 rounded-2xl">
+            <label className="prompt">
+              Which one of these fits your needs best?
+            </label>
+            <div className="font-extrabold text-start grid flex justify-center m-8">
               {/* choice 1 */}
               <div>
                 <input
@@ -139,7 +140,7 @@ function QuestionnaireForm(props) {
                   value="5"
                   onChange={handleChange}
                 />
-                5 🛏️ bedroom | 3.5 🛀 bathroom
+                🛏️ 5 bedroom 🛀 3.5 bathroom
               </div>
               {/* choice 2 */}
               <div>
@@ -150,7 +151,7 @@ function QuestionnaireForm(props) {
                   value="4"
                   onChange={handleChange}
                 />
-                4 🛏️ bedroom 2.5 🛀 bathroom
+                🛏️ 4 bedroom 🛀 2.5 bathroom
               </div>
 
               {/* choice 3 */}
@@ -162,7 +163,7 @@ function QuestionnaireForm(props) {
                   value="3"
                   onChange={handleChange}
                 />
-                3 🛏️ bedroom 2.5 🛀 bathroom
+                🛏️ 3 bedroom 🛀 2.5 bathroom
               </div>
               {/* choice 4 */}
               <div>
@@ -173,7 +174,7 @@ function QuestionnaireForm(props) {
                   value="2"
                   onChange={handleChange}
                 />
-                2 🛏️ bedroom 1.5 🛀 bathroom
+                🛏️ 2 bedroom 🛀 1.5 bathroom
               </div>
               {/* choice 5 */}
               <div>
@@ -184,20 +185,20 @@ function QuestionnaireForm(props) {
                   value="1"
                   onChange={handleChange}
                 />
-                1 🛏️ bedroom 1 🛀 bathroom
+                🛏️ 1 bedroom 🛀 1 bathroom
               </div>
             </div>
 
             <div className="flex justify-center">
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="button  mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className=" bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -208,9 +209,11 @@ function QuestionnaireForm(props) {
         )}
         {/* third step of the questionnaire */}
         {currentStep === 3 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
-            <label>Which style of home would fit your needs the best?</label>
-            <div className="font-extrabold text-center grid flex justify-center m-10">
+          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+            <label className="prompt">
+              Which style of home would fit your needs the best?
+            </label>
+            <div className="font-extrabold text-start grid flex justify-center m-8">
               <div>
                 <input
                   className="mt-1.5"
@@ -219,7 +222,7 @@ function QuestionnaireForm(props) {
                   value="single_family"
                   onChange={handleChange}
                 />
-                Single Family Home 👪
+                👪 Single Family Home
               </div>
               <div>
                 <input
@@ -229,29 +232,29 @@ function QuestionnaireForm(props) {
                   value="multi_family"
                   onChange={handleChange}
                 />
-                Townhouse 🏘️
+                🏘️ Townhouse
               </div>
               <div>
                 <input
                   className="mt-1.5"
                   type="radio"
                   name="style"
-                  value="multi_family"
+                  value="farm"
                   onChange={handleChange}
                 />
-                Condo 🏠
+                🏠 Farm
               </div>
             </div>
             <div className="flex justify-center">
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="button  mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -262,46 +265,46 @@ function QuestionnaireForm(props) {
         )}
         {/* fourth step of the questionnaire */}
         {currentStep === 4 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
-            <label>How many stories do you need?</label>
-            <div className="font-extrabold text-center grid flex justify-center m-10">
+          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+            <label className="prompt">How many stories do you need?</label>
+            <div className="font-extrabold text-start grid flex justify-center m-8">
               <div>
                 <input
                   className="mt-1.5"
                   type="radio"
-                  name="stories"
+                  name="story"
                   value="multi"
                   onChange={handleChange}
                 />
-                Multi/Split
+                3+
               </div>
 
               <div>
                 <input
                   className="mt-1.5"
                   type="radio"
-                  name="stories"
+                  name="story"
                   value="multi"
                   onChange={handleChange}
                 />
-                3 or more
+                3
               </div>
               <div>
                 <input
                   className="mt-1.5"
                   type="radio"
-                  name="multi"
-                  value="2"
+                  name="story"
+                  value="multi"
                   onChange={handleChange}
                 />
-                2 or more
+                2
               </div>
               <div>
                 <input
                   className="mt-1.5"
                   type="radio"
-                  name="single"
-                  value="1"
+                  name="story"
+                  value="single"
                   onChange={handleChange}
                 />
                 1 story
@@ -310,14 +313,14 @@ function QuestionnaireForm(props) {
 
             <div className="flex justify-center">
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -328,10 +331,10 @@ function QuestionnaireForm(props) {
         )}
         {/* fifth step of the questionnaire */}
         {currentStep === 5 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
-            <label>How much space do you need?</label>
+          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+            <label className="prompt">How much space do you need?</label>
 
-            <div className="font-extrabold text-center grid flex justify-center m-10">
+            <div className="font-extrabold text-start grid flex justify-center m-8">
               <div>
                 <input
                   className="mt-1.5"
@@ -390,14 +393,14 @@ function QuestionnaireForm(props) {
 
             <div className="flex justify-center">
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -408,14 +411,12 @@ function QuestionnaireForm(props) {
         )}
         {/* second step of the questionnaire */}
         {currentStep === 6 && (
-          <div className="font-extrabold grid flex justify-center m-10">
-            <label className="grid ml-18 text-center  flex justify-center">
-              <p className="text-center w-40">
-                Which areas would you prefer the most?
-              </p>
+          <div className="font-extrabold grid flex justify-center m-8">
+            <label className="prompt grid ml-18 text-center  flex justify-center">
+              Which areas would you prefer the most?
             </label>
 
-            <div className="font-extrabold text-center grid flex justify-center m-10">
+            <div className="font-extrabold text-start grid flex justify-center m-8">
               <div>
                 <input
                   className="mt-1.5"
@@ -491,14 +492,14 @@ function QuestionnaireForm(props) {
             </div>
             <div className="flex justify-center">
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="button  mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -509,11 +510,27 @@ function QuestionnaireForm(props) {
         )}
         {/* third step of the questionnaire */}
         {currentStep === 7 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-10">
-            <p className="mb-8 grid flex justify-center">ALL DONE!</p>
+          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+            <div className="mb-8 grid flex justify-center">
+              ALL DONE!
+              <div>
+                {formData ? (
+                  <div className="criteria">
+                    <p> Area: {formData.area}</p>
+                    <p> Bed: {formData.bedroomsandBath}</p>
+                    <p>Bath: {formData.bedroomsandBath} </p>
+                    <p> Space: {formData.space}</p>
+                    <p> Stories: {formData.story}</p>
+                    <p>Style: {formData.style} </p>
+                  </div>
+                ) : (
+                  <p>loading. . .</p>
+                )}
+              </div>
+            </div>
             <div className="flex justify-center">
               <button
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
@@ -522,35 +539,12 @@ function QuestionnaireForm(props) {
               <button
                 // style={{ display: showButton1 ? "block" : "none" }}
                 onClick={handleButton1Click}
-                className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="submit"
                 disabled={isSubmitDisabled}
               >
                 Submit
               </button>
-              {/* <Link to="/results">
-                <button
-                  style={{ display: showButton2 ? "block" : "none" }}
-                  onClick={handleButton2Click}
-                  className=" bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  type="submit"
-                >
-                  See My Options
-                </button>
-              </Link> */}
-              {/* 
-              <Link to="/results">
-              <button
-              ref={submitty}
-            
-                
-                className="sumbitty bg-[#1497D4] mx-1.5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                type="submit"
-               disabled
-              >
-                Submit
-              </button>
-              </Link> */}
             </div>
           </div>
         )}

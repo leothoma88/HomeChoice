@@ -88,7 +88,7 @@ function Results() {
               <img
                 className="homeimage"
                 alt="homeimage"
-                src={houseArray[number].primary_photo.href || { Home }}
+                src={houseArray[number]?.primary_photo.href || { Home }}
               ></img>
             </div>
           ) : (

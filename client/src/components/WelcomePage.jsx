@@ -22,7 +22,7 @@ const WelcomePage = () => {
       </div>
       <div className="mb-8 top-0 flex justify-center items-center p-6">
         <Link to="/questionnaire">
-          <button className=" bg-[#715959] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">
+          <button className="button text-white font-bold py-2 px-4 rounded ">
             Start Home Quiz!
           </button>
         </Link>

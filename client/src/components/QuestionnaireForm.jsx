@@ -115,7 +115,7 @@ function QuestionnaireForm(props) {
             />
             <div className="mt-6 flex justify-center">
               <button
-                className="font-bold py-2 px-4 rounded"
+                className="button font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -191,14 +191,14 @@ function QuestionnaireForm(props) {
 
             <div className="flex justify-center">
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className="button  mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className="   text-white font-bold py-2 px-4 rounded"
+                className=" button  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -247,14 +247,14 @@ function QuestionnaireForm(props) {
             </div>
             <div className="flex justify-center">
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className="button  mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -313,14 +313,14 @@ function QuestionnaireForm(props) {
 
             <div className="flex justify-center">
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -393,14 +393,14 @@ function QuestionnaireForm(props) {
 
             <div className="flex justify-center">
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -492,14 +492,14 @@ function QuestionnaireForm(props) {
             </div>
             <div className="flex justify-center">
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className="button  mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
                 Previous
               </button>
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handleNext}
               >
@@ -530,7 +530,7 @@ function QuestionnaireForm(props) {
             </div>
             <div className="flex justify-center">
               <button
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={handlePrev}
               >
@@ -539,7 +539,7 @@ function QuestionnaireForm(props) {
               <button
                 // style={{ display: showButton1 ? "block" : "none" }}
                 onClick={handleButton1Click}
-                className="  mx-1.5  text-white font-bold py-2 px-4 rounded"
+                className=" button mx-1.5  text-white font-bold py-2 px-4 rounded"
                 type="submit"
                 disabled={isSubmitDisabled}
               >

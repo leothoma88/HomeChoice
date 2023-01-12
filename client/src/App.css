@@ -82,7 +82,7 @@ button:hover {
 
 .homeimage {
   object-fit: cover;
-  height: 34rem;
+  height: 24rem;
 }
 .homeimage::before {
   content: "";

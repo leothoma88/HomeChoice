@@ -2,6 +2,8 @@ import React from 'react';
 
 function EmailButton() {
   const handleClick = () => {
+
+    //Pulls for
     // Set the email subject and body
     const subject = encodeURIComponent('Example Email');
     const body = encodeURIComponent('Hello,\n\nThis is an example email.\n\nSincerely,\n[Your Name]');

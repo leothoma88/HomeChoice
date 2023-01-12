@@ -76,7 +76,7 @@ function QuestionnaireForm(props) {
       >
         {/* first step of the questionnaire */}
         {currentStep === 1 && (
-          <div className="flex flex-wrap grid flex justify-center m-8 font-extrabold text-center">
+          <div className="flex flex-wrap grid text-black flex justify-center m-8 font-extrabold text-center">
             <label className="font-sans" htmlFor="name">
               First Name:
             </label>

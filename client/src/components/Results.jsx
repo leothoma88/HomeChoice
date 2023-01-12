@@ -53,11 +53,14 @@ function Results() {
     const json = await response.json();
     console.log("json..", json);
     const { status, data } = json;
-
+    console.log(data,"hhjh")
     const houseData = data.results;
+   
 
     setHouseArray(houseData);
   }
+
+  
 
   console.log("house Arry", houseArray);
   //Pull API DATA

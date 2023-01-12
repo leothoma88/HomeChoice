@@ -40,7 +40,7 @@ function Results() {
   const [houseArray, setHouseArray] = useState([]);
   async function fetchData() {
     const response = await fetch(
-      `https://us-real-estate.p.rapidapi.com/for-sale?offset=0&limit=42&state_code=GA&city=Atlanta&sort=newest&beds_min=${bedroomsandBath}&baths_min=${bedroomsandBath}&property_type=multi_family&home_size_min=${space}&stories=single`,
+      `https://us-real-estate.p.rapidapi.com/for-sale?offset=0&limit=42&state_code=GA&city=${area}&sort=newest&beds_min=${bedroomsandBath}&baths_min=${bedroomsandBath}&property_type=single_family&home_size_min=${space}&stories=single`,
       {
         headers: {
           "X-RapidAPI-Key":
@@ -69,8 +69,15 @@ function Results() {
   }, []);
 
   const handleNext = () => {
-    // let index = 0;
-    setNumber(number + 1);
+    if(number===houseArray.length -1){
+      setNumber(0)
+      
+    }else{
+      setNumber(number + 1);
+      
+    }
+   
+    
     // index++;
   };
 

@@ -234,16 +234,6 @@ function QuestionnaireForm(props) {
                 />
                 🏘️ Townhouse
               </div>
-              <div>
-                <input
-                  className="mt-1.5"
-                  type="radio"
-                  name="style"
-                  value="farm"
-                  onChange={handleChange}
-                />
-                🏠 Farm
-              </div>
             </div>
             <div className="flex justify-center">
               <button
@@ -442,7 +432,7 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Midtown Atlanta"
+                  value="Atlanta"
                   onChange={handleChange}
                 />
                 Midtown

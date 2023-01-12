@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+
+
+import { json, useLocation } from "react-router-dom";
 
 function EmailButton() {
+  //Pulls formData
+  const location = useLocation();
+  const formData = location.state.formData || {};
   const handleClick = () => {
 
-    //Pulls for
+   
+
+    
     // Set the email subject and body
-    const subject = encodeURIComponent('Example Email');
-    const body = encodeURIComponent('Hello,\n\nThis is an example email.\n\nSincerely,\n[Your Name]');
+    const subject = encodeURIComponent(`${formData.fname} ${formData.lname}'s Home Journey`);
+    const body = encodeURIComponent(`Hello Lender,\n\nI am looking to move to the ${formData.area}area into a ${formData.bedroomsandBath} bedroom home and I would like to get preapproved for {price}.\n\nPlease reach out to me as soon you can.\n\n\n\nSincerely,\n[Your Name]\n${formData.phoneNumber}}`);
 
     // Construct the email URL
     const url = `mailto:example@example.com?subject=${subject}&body=${body}`;

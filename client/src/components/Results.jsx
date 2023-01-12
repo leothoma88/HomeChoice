@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Mortgage from "./Mortgage";
-
+import _ from "lodash";
 import { json, useLocation } from "react-router-dom";
 import Home from "../assets/pexels-binyamin-mellish-106399.jpg";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ function Results() {
     lname,
     phoneNumber,
     space,
-    stories,
+    story,
     style,
   } = location.state?.formData;
 
@@ -25,6 +25,7 @@ function Results() {
   const [isVisible, setIsVisible] = useState(true);
   const [isSecondVisible, setIsSecondVisible] = useState(false);
   const [currentProp, setCurrentProp] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const toggleVisibility = (property) => {
     setIsVisible(!isVisible);
@@ -37,10 +38,10 @@ function Results() {
 
   //Hook used to go through different houses
   //Hook used to format data
-  const [houseArray, setHouseArray] = useState([]);
+  const [houseArray, setHouseArray] = useState(null);
   async function fetchData() {
     const response = await fetch(
-      `https://us-real-estate.p.rapidapi.com/for-sale?offset=0&limit=42&state_code=GA&city=Atlanta&sort=newest&beds_min=${bedroomsandBath}&baths_min=${bedroomsandBath}&property_type=multi_family&home_size_min=${space}&stories=single`,
+      `https://us-real-estate.p.rapidapi.com/for-sale?offset=0&limit=42&state_code=GA&city=${area}&sort=newest&beds_min=${bedroomsandBath}&baths_min=${bedroomsandBath}&property_type=${style}&home_size_min=${space}&stories=${story}`,
       {
         headers: {
           "X-RapidAPI-Key":
@@ -53,10 +54,11 @@ function Results() {
     const json = await response.json();
     console.log("json..", json);
     const { status, data } = json;
-
+    console.log("data count... ", data.count);
     const houseData = data.results;
 
     setHouseArray(houseData);
+    setIsLoading(false);
   }
 
   console.log("house Arry", houseArray);
@@ -71,6 +73,11 @@ function Results() {
     // index++;
   };
 
+  const handleBack = () => {
+    // let index = 0;
+    setNumber(number - 1);
+  };
+
   // On click function that lets you navigate through an array of data
   //This break down the data to an object
   const { status, data } = houseArray || {};
@@ -82,9 +89,11 @@ function Results() {
         className="rounded-lg m-20 h-1/2 w-2/3"
       >
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
-          {houseArray ? (
+          {/* {!isLoading ? ( */}
+          {!_.isEmpty(houseArray) ? (
             <div>
-              Price: ${houseArray[number]?.list_price}
+              <p>Price</p>
+
               <img
                 className="homeimage"
                 alt="homeimage"
@@ -92,24 +101,27 @@ function Results() {
               ></img>
             </div>
           ) : (
-            <p>Loading...</p>
+            <h2> No data </h2>
           )}
+          {/* ) : (
+            <p>Loading . . .</p>
+          )} */}
         </div>
         <div className="flex flex-col justify-center sm:flex-row ">
           <button
             onClick={() => toggleVisibility(houseArray[number].list_price)}
-            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="button m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             This is the one!
           </button>
           <button
             onClick={handleNext}
-            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="button m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             Next One
           </button>
           <Link to="/questionnaire">
-            <button className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="button m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Start Over
             </button>
           </Link>
@@ -119,7 +131,7 @@ function Results() {
             <br />
             <br />
             <h3>Your Criteria:</h3>
-            <p>${houseArray[number]?.list_price}</p>
+            <p>${houseArray && houseArray[number]?.list_price}</p>
             <p>First: {formData.fname}</p>
 
             <p>Last: {formData.lname}</p>

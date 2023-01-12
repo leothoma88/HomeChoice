@@ -422,10 +422,10 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Duluth"
+                  value="Snellville"
                   onChange={handleChange}
                 />
-                Gwinnett County
+                Snellville
               </div>
               <div>
                 <input
@@ -435,17 +435,17 @@ function QuestionnaireForm(props) {
                   value="Roswell"
                   onChange={handleChange}
                 />
-                North Fulton (Johns Creek,Roswell,Alpharetta)
+                Roswell
               </div>
               <div>
                 <input
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Midtown Atlanta"
+                  value="Atlanta"
                   onChange={handleChange}
                 />
-                Midtown
+                Atlanta
               </div>
               <div>
                 <input
@@ -455,7 +455,7 @@ function QuestionnaireForm(props) {
                   value="Kennesaw"
                   onChange={handleChange}
                 />
-                Cobb County
+                Kennesaw
               </div>
               <div>
                 <input
@@ -465,7 +465,7 @@ function QuestionnaireForm(props) {
                   value="Decatur"
                   onChange={handleChange}
                 />
-                Dekalb County
+                Decatur
               </div>
 
               <div>
@@ -476,7 +476,7 @@ function QuestionnaireForm(props) {
                   value="Douglasville"
                   onChange={handleChange}
                 />
-                Douglas County
+                Douglasville
               </div>
 
               <div>
@@ -484,10 +484,10 @@ function QuestionnaireForm(props) {
                   className="mt-1.5"
                   type="radio"
                   name="area"
-                  value="Stockbridge"
+                  value="Mcdonough"
                   onChange={handleChange}
                 />
-                Henry County
+                McDonough
               </div>
             </div>
             <div className="flex justify-center">

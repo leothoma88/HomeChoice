@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Results() {
   const location = useLocation();
-  const formData = location.state.formData;
+  const formData = location.state.formData || {};
 
   const {
     area,
@@ -23,15 +23,16 @@ function Results() {
 
   //Visibility
   const [isVisible, setIsVisible] = useState(true);
-  const [isSecondVisible, setIsSecondVisible] = React.useState(false);
+  const [isSecondVisible, setIsSecondVisible] = useState(false);
+  const [currentProp, setCurrentProp] = useState(0);
 
-  const toggleVisibility = () => {
+  const toggleVisibility = (property) => {
     setIsVisible(!isVisible);
     setIsSecondVisible(!isSecondVisible);
+    setCurrentProp(property);
   };
 
   //This takes mortgage number and puts it in a hook
-
   const [number, setNumber] = useState(0);
 
   //Hook used to go through different houses
@@ -52,23 +53,22 @@ function Results() {
     const json = await response.json();
     console.log("json..", json);
     const { status, data } = json;
-    
+
     const houseData = data.results;
-    
+
     setHouseArray(houseData);
   }
-  
-  console.log("houseData", houseArray);
+
+  console.log("house Arry", houseArray);
   //Pull API DATA
   useEffect(() => {
     fetchData();
   }, []);
 
   const handleNext = () => {
-    console.log("house", houseArray[0]);
-    let index = 0;
-    setNumber(houseArray[0].list_price);
-    index++;
+    // let index = 0;
+    setNumber(number + 1);
+    // index++;
   };
 
   // On click function that lets you navigate through an array of data
@@ -84,7 +84,7 @@ function Results() {
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
           {houseArray ? (
             <div>
-              Pricessssssss: {houseArray[number]?.list_price}
+              Price: ${houseArray[number]?.list_price}
               <img
                 className="homeimage"
                 alt="homeimage"
@@ -95,64 +95,52 @@ function Results() {
             <p>Loading...</p>
           )}
         </div>
-        <div className="grid grid-col-1">
+        <div className="flex flex-col justify-center sm:flex-row ">
+          <button
+            onClick={() => toggleVisibility(houseArray[number].list_price)}
+            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            This is the one!
+          </button>
+          <button
+            onClick={handleNext}
+            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Next One
+          </button>
+          <Link to="/questionnaire">
+            <button className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Start Over
+            </button>
+          </Link>
+        </div>
+        <div className="result-criteria grid grid-col-1">
           <div className=" font-extrabold  grid flex justify-center">
-            <h2 className="text-xl">Price:</h2>
-            <div>
-              {/* {json ? (
-                <p className="bg-white text-amber-300 text-2xl">
-                  {houseArray[3].list_price}
-                </p>
-              ) : (
-                <p>Loading...</p>
-              )} */}
-            </div>
             <br />
             <br />
-            <h1>Your Criteria:</h1>
-            <p>
-              <br />
-            </p>
+            <h3>Your Criteria:</h3>
+            <p>${houseArray[number]?.list_price}</p>
             <p>First: {formData.fname}</p>
-            <n />
+
             <p>Last: {formData.lname}</p>
-            <n />
+            <br />
             <p>Email: {formData.email}</p>
-            <n />
+            <br />
             <p>Number: {formData.phoneNumber}</p>
-            <n />
+            <br />
             <p>Bed Minimum: {formData.bedroomsandBath}</p>
-            <n />
+            <br />
             <p>Sq Fr: {formData.space}</p>
-            <n />
+            <br />
             <p>Style : {formData.style}</p>
-            <n />
-            <p>Floors: {formData.stories}</p>
-            <n />
-          </div>
-          <div className="flex flex-col justify-center sm:flex-row ">
-            <button
-              onClick={toggleVisibility}
-              className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              This is the one!
-            </button>
-            <button
-              onClick={handleNext}
-              className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Next One
-            </button>
-            <Link to="/questionnaire">
-              <button className="m-10 w-1/2 bg-[#1497D4] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Start Over
-              </button>
-            </Link>
+            <br />
+            <p>Floors: {formData.story}</p>
+            <br />
           </div>
         </div>
       </div>
       <div style={{ display: isSecondVisible ? "block" : "none" }}>
-        <Mortgage number={number} />
+        <Mortgage number={currentProp} />
       </div>
     </div>
   );

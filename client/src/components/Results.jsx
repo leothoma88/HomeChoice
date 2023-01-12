@@ -74,12 +74,21 @@ function Results() {
       
     }else{
       setNumber(number + 1);
-      
-    }
-   
-    
     // index++;
   };
+}
+
+const handleBack = () => {
+  if(number===houseArray.length -1){
+    setNumber(1)
+    
+  }else{
+    setNumber(number - 1);
+  // index++;
+};
+}
+
+
 
   // On click function that lets you navigate through an array of data
   //This break down the data to an object
@@ -92,34 +101,44 @@ function Results() {
         className="rounded-lg m-20 h-1/2 w-2/3"
       >
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
-          {houseArray ? (
-            <div>
-              Price: ${houseArray[number]?.list_price}
-              <img
-                className="homeimage"
-                alt="homeimage"
-                src={houseArray[number]?.primary_photo.href || { Home }}
-              ></img>
-            </div>
+        {houseArray ? (
+        <div>
+          Price: ${houseArray[number]?.list_price}
+          {houseArray[number]?.primary_photo.href ? (
+            <img
+              className="homeimage"
+              alt="homeimage"
+              src={houseArray[number].primary_photo.href}
+            ></img>
           ) : (
-            <p>Loading...</p>
+            <img src={Home} alt="default" className="homeimage"  />
           )}
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
         </div>
         <div className="flex flex-col justify-center sm:flex-row ">
           <button
-            onClick={() => toggleVisibility(houseArray[number].list_price)}
-            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => toggleVisibility(houseArray[number]?.list_price)}
+            className="m-10 w-1/3 bg-[#715959] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             This is the one!
           </button>
           <button
+            onClick={handleBack}
+            className="m-10 w-1/3 bg-[#715959]  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Back
+          </button>
+          <button
             onClick={handleNext}
-            className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="m-10 w-1/3 bg-[#715959]  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             Next One
           </button>
           <Link to="/questionnaire">
-            <button className="m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="m-10 w-1/1 bg-[#715959]  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Start Over
             </button>
           </Link>

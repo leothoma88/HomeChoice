@@ -71,12 +71,13 @@ function Results() {
   }, []);
 
   const handleNext = () => {
-    if(number===houseArray.length -1){
+  
+    if(number===houseArray.length -2){
       setNumber(0)
       
     }else{
       setNumber(number + 1);
-    // index++;
+    
   };
 }
 
@@ -105,27 +106,25 @@ const handleBack = () => {
         className="rounded-lg m-20 h-1/2 w-2/3"
       >
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
-          {/* {!isLoading ? ( */}
-          {!_.isEmpty(houseArray) ? (
+          {isLoading ? ( 
+            <p>Loading...</p>
+            ) :
+          
+          !_.isEmpty(houseArray) ? (
             <div>
-              <p>Price</p>
+              <p className="text-2xl">Price</p>
 
               <img
                 className="homeimage"
                 alt="homeimage"
-                src={houseArray[number]?.primary_photo.href || { Home }}
+                src={houseArray[number]?.primary_photo?.href ||  Home }
               ></img>
             </div>
           ) : (
             <h2> No data </h2>
           )}
-          {/* ) : (
-            <p>Loading . . .</p>
-          )} */}
         </div>
-      ) : (
-        <p>Loading...</p>
-      )
+    
         </div>
         <div className="flex flex-col justify-center sm:flex-row ">
           <button

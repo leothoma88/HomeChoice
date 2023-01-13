@@ -56,10 +56,13 @@ function Results() {
     const { status, data } = json;
     console.log("data count... ", data.count);
     const houseData = data.results;
+   
 
     setHouseArray(houseData);
     setIsLoading(false);
   }
+
+  
 
   console.log("house Arry", houseArray);
   //Pull API DATA
@@ -68,15 +71,28 @@ function Results() {
   }, []);
 
   const handleNext = () => {
-    // let index = 0;
-    setNumber(number + 1);
-    // index++;
+  
+    if(number===houseArray.length -2){
+      setNumber(0)
+      
+    }else{
+      setNumber(number + 1);
+    
   };
+}
 
-  const handleBack = () => {
-    // let index = 0;
+const handleBack = () => {
+  if(number===houseArray.length -1){
+    setNumber(1)
+    
+  }else{
     setNumber(number - 1);
-  };
+  // index++;
+};
+}
+
+
+
 
   // On click function that lets you navigate through an array of data
   //This break down the data to an object
@@ -84,44 +100,55 @@ function Results() {
 
   return (
     <div className="results flex justify-center items-center">
+      <div style={{ display: isVisible ? "block" : "none" }}>
       <div
-        style={{ display: isVisible ? "block" : "none" }}
+        
         className="rounded-lg m-20 h-1/2 w-2/3"
       >
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
-          {/* {!isLoading ? ( */}
-          {!_.isEmpty(houseArray) ? (
+          {isLoading ? ( 
+            <p>Loading...</p>
+            ) :
+          
+          !_.isEmpty(houseArray) ? (
             <div>
-              <p>Price</p>
+              <p className="text-2xl">Price:</p>
+              <p className="text-4xl">${houseArray && houseArray[number]?.list_price}</p>
+
 
               <img
                 className="homeimage"
                 alt="homeimage"
-                src={houseArray[number]?.primary_photo.href || { Home }}
+                src={houseArray[number]?.primary_photo?.href ||  Home }
               ></img>
             </div>
           ) : (
             <h2> No data </h2>
           )}
-          {/* ) : (
-            <p>Loading . . .</p>
-          )} */}
+        </div>
+    
         </div>
         <div className="flex flex-col justify-center sm:flex-row ">
           <button
-            onClick={() => toggleVisibility(houseArray[number].list_price)}
-            className="button m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => toggleVisibility(houseArray[number]?.list_price)}
+            className="m-10 w-1/3 bg-[#715959] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             This is the one!
           </button>
           <button
+            onClick={handleBack}
+            className="m-10 w-1/3 bg-[#715959]  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Back
+          </button>
+          <button
             onClick={handleNext}
-            className="button m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="m-10 w-1/3 bg-[#715959]  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             Next One
           </button>
           <Link to="/questionnaire">
-            <button className="button m-10 w-1/2  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="m-10 w-1/1 bg-[#715959]  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Start Over
             </button>
           </Link>
@@ -132,21 +159,15 @@ function Results() {
             <br />
             <h3>Your Criteria:</h3>
             <p>${houseArray && houseArray[number]?.list_price}</p>
-            <p>First: {formData.fname}</p>
+            <p>First Name: {formData.fname}</p>
 
-            <p>Last: {formData.lname}</p>
-            <br />
+            <p>Last Name: {formData.lname}</p>
+            
             <p>Email: {formData.email}</p>
-            <br />
+            
             <p>Number: {formData.phoneNumber}</p>
             <br />
-            <p>Bed Minimum: {formData.bedroomsandBath}</p>
-            <br />
-            <p>Sq Fr: {formData.space}</p>
-            <br />
-            <p>Style : {formData.style}</p>
-            <br />
-            <p>Floors: {formData.story}</p>
+            
             <br />
           </div>
         </div>

@@ -76,12 +76,12 @@ function QuestionnaireForm(props) {
       >
         {/* first step of the questionnaire */}
         {currentStep === 1 && (
-          <div className="flex flex-wrap grid flex justify-center m-8 font-extrabold text-center">
+          <div className="flex flex-wrap grid  flex justify-center m-8 font-extrabold text-center">
             <label className="font-sans" htmlFor="name">
               First Name:
             </label>
             <input
-              className="inline-block rounded-md"
+              className="inline-block text-black rounded-md"
               name="fname"
               type="text"
               id="fname"
@@ -91,7 +91,7 @@ function QuestionnaireForm(props) {
               Last Name:
             </label>
             <input
-              className="inline-block rounded-md"
+              className="inline-block text-black rounded-md"
               type="text"
               name="lname"
               id="lname"
@@ -99,7 +99,7 @@ function QuestionnaireForm(props) {
             />
             <label htmlFor="name">Email:</label>
             <input
-              className="inline-block rounded-md"
+              className="inline-block text-black rounded-md"
               type="text"
               name="email"
               id="email"
@@ -233,16 +233,6 @@ function QuestionnaireForm(props) {
                   onChange={handleChange}
                 />
                 🏘️ Townhouse
-              </div>
-              <div>
-                <input
-                  className="mt-1.5"
-                  type="radio"
-                  name="style"
-                  value="farm"
-                  onChange={handleChange}
-                />
-                🏠 Farm
               </div>
             </div>
             <div className="flex justify-center">

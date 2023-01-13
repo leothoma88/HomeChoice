@@ -100,9 +100,9 @@ const handleBack = () => {
 
   return (
     <div className="results flex justify-center items-center">
-      <div>
+      <div style={{ display: isVisible ? "block" : "none" }}>
       <div
-        style={{ display: isVisible ? "block" : "none" }}
+        
         className="rounded-lg m-20 h-1/2 w-2/3"
       >
         <div className="question-form  subpixel-antialiased text-center flex items-center font-sans text-lg sm:text-7xl sm: text-white">
@@ -112,7 +112,9 @@ const handleBack = () => {
           
           !_.isEmpty(houseArray) ? (
             <div>
-              <p className="text-2xl">Price</p>
+              <p className="text-2xl">Price:</p>
+              <p className="text-4xl">${houseArray && houseArray[number]?.list_price}</p>
+
 
               <img
                 className="homeimage"
@@ -157,21 +159,15 @@ const handleBack = () => {
             <br />
             <h3>Your Criteria:</h3>
             <p>${houseArray && houseArray[number]?.list_price}</p>
-            <p>First: {formData.fname}</p>
+            <p>First Name: {formData.fname}</p>
 
-            <p>Last: {formData.lname}</p>
-            <br />
+            <p>Last Name: {formData.lname}</p>
+            
             <p>Email: {formData.email}</p>
-            <br />
+            
             <p>Number: {formData.phoneNumber}</p>
             <br />
-            <p>Bed Minimum: {formData.bedroomsandBath}</p>
-            <br />
-            <p>Sq Fr: {formData.space}</p>
-            <br />
-            <p>Style : {formData.style}</p>
-            <br />
-            <p>Floors: {formData.story}</p>
+            
             <br />
           </div>
         </div>

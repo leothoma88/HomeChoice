@@ -39,9 +39,10 @@ const Mortgage = ({ number }) => {
               Mortgage Calculator
             </h1>
 
-            <form>
+            <form className="text-black font-bold">
               Loan Amount: $
               <input
+              className="text-black"
                 type="number"
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(number)}

@@ -30,6 +30,7 @@ function App() {
 
   const style = {
     backgroundImage: `url(${imageArray[bkImg]})`,
+    
   };
 
   return (

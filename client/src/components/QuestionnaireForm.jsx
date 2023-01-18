@@ -107,7 +107,7 @@ function QuestionnaireForm(props) {
             />
             <label htmlFor="name">Phone Number:</label>
             <input
-              className="inline-block rounded-md"
+              className="inline-block text-black rounded-md"
               type="text"
               name="phoneNumber"
               id="phoneNumber"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import Home from "../assets/pexels-binyamin-mellish-106399.jpg";
+import Home from "../assets/pexels-binyamin-mellish-186077.jpeg"
+
 
 const WelcomePage = () => {
   return (

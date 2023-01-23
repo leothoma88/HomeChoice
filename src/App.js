@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import house1 from "./assets/images/house1.jpeg";
 import house2 from "./assets/images/house2.jpeg";
 
+
 function App() {
   const imageArray = [
     house1,

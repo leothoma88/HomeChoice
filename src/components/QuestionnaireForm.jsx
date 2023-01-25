@@ -71,7 +71,7 @@ function QuestionnaireForm(props) {
   return (
     <div className="h-screen flex justify-center sm:flex-wrap">
       <form
-        className="question-form m-20 h-2/3 w-1/2 rounded-md "
+        className="question-form m-20 h-1/2 w-1/2 rounded-md "
         onSubmit={handleSubmit}
       >
         {/* first step of the questionnaire */}

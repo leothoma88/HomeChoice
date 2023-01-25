@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Mortgage from "./components/Mortgage";
 import QuestionnaireForm from "./components/QuestionnaireForm";
 import Results from "./components/Results";
 import WelcomePage from "./components/WelcomePage";
@@ -42,7 +41,7 @@ function App() {
           <Route path="/" element={<WelcomePage />}></Route>
           <Route path="/questionnaire" element={<QuestionnaireForm />}></Route>
           <Route path="/results" element={<Results />}></Route>
-          <Route path="/mortgage" element={<Mortgage />}></Route>
+          
         </Routes>
 
         <Footer />

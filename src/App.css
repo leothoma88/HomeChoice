@@ -6,7 +6,7 @@
   --primary: #cfb57c;
   --secondary: rgba(204, 225, 252, 0.877);
   --teritary: rgba(155, 207, 102, 0.778);
-  --dark-blue: rgb(49, 79, 120);
+  --dark-blue: #314f78;
   --text: #715959;
   --dark-text: #463c3c;
 }
@@ -71,6 +71,17 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: calc(70vw + 15px);
+  margin: 2rem;
+}
+
+.question-box{
+  margin-inline: 2vw;
+  grid-gap: 2%;
+}
+
+.text-input{
+  width: calc(45vw + 10px);
 }
 
 .results {
@@ -97,6 +108,14 @@ button:hover {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   filter: blur(5px);
+}
+
+.mortgage-box{ 
+
+  background: rgba(0, 0, 0, 0.5);
+  /* filter: blur(5px);  */
+
+
 }
 
 .icon {

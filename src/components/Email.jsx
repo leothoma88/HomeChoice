@@ -6,12 +6,9 @@ import { json, useLocation } from "react-router-dom";
 function EmailButton() {
   //Pulls formData
   const location = useLocation();
-  const formData = location.state.formData || {};
+  const formData = location.state || {};
+
   const handleClick = () => {
-
-   
-
-    
     // Set the email subject and body
     const subject = encodeURIComponent(`${formData.fname} ${formData.lname}'s Home Journey`);
     const body = encodeURIComponent(`Hello Lender,\n\nI am looking to move to the ${formData.area}area into a ${formData.bedroomsandBath} bedroom home and I would like to get preapproved for {price}.\n\nPlease reach out to me as soon you can.\n\n\n\nSincerely,\n${formData.fname} ${formData.lname}\n${formData.phoneNumber}}`);

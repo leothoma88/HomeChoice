@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 
 function Results() {
   const location = useLocation();
-  const formData = location.state.formData || {};
+  const formData = location?.state || {};
+
+  console.log(formData,"HJJJJJJJJ")
+
 
   const {
     area,
@@ -19,7 +22,9 @@ function Results() {
     space,
     story,
     style,
-  } = location.state?.formData;
+  } = location?.state;
+
+
 
   //Visibility
   const [isVisible, setIsVisible] = useState(true);

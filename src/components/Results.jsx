@@ -11,7 +11,6 @@ function Results() {
 
   console.log(formData,"HJJJJJJJJ")
 
-
   const {
     area,
     bedroomsandBath,
@@ -23,7 +22,6 @@ function Results() {
     story,
     style,
   } = location?.state;
-
 
 
   //Visibility
@@ -164,20 +162,20 @@ const handleBack = () => {
             <br />
             <h3>Your Criteria:</h3>
             <p>${houseArray && houseArray[number]?.list_price}</p>
-            <p>First Name: {formData.fname}</p>
+            <p>First Name: {fname}</p>
 
-            <p>Last Name: {formData.lname}</p>
+            <p>Last Name: {lname}</p>
             
-            <p>Email: {formData.email}</p>
+            <p>Email: {email}</p>
             
-            <p>Number: {formData.phoneNumber}</p>
+            <p>Number: {phoneNumber}</p>
             <br />
             
             <br />
           </div>
         </div>
       </div>
-      <div style={{ display: isSecondVisible ? "block" : "none" }}>
+      <div className="h-screen" style={{ display: isSecondVisible ? "block" : "none" }}>
         <Mortgage number={currentProp} />
       </div>
     </div>

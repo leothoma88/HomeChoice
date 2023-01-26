@@ -23,6 +23,7 @@ function Results() {
     style,
   } = location?.state;
 
+
   //Visibility
   const [isVisible, setIsVisible] = useState(true);
   const [isSecondVisible, setIsSecondVisible] = useState(false);

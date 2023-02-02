@@ -31,18 +31,18 @@ const Mortgage = ({ number }) => {
 
 
   return (
-    <div>
-      <div className="flex justify-center items-center">
+    <div className="">
+      <div className="mortgage-box flex justify-center items-center">
         <div className="rounded-lg m-20 h-2/3 w-2/3  flex justify-center items-center">
           <div>
-            <h1 className="bg-[#715959] text-white font-bold my-3">
+            <h1 className="bg-[#715959] text-white font-bold my-3 rounded-md">
               Mortgage Calculator
             </h1>
 
-            <form className="text-black font-bold">
+            <form className="criteria flex flex-col text-black font-bold">
               Loan Amount: $
               <input
-              className="text-black"
+              className="text-black rounded-md"
                 type="number"
                 value={loanAmount}
                 onChange={(e) => setLoanAmount(number)}
@@ -50,6 +50,7 @@ const Mortgage = ({ number }) => {
               <br />
               Interest Rate:{" "}
               <input
+              className="text-black rounded-md"
                 type="number"
                 value={interestRate}
                 onChange={(e) => setInterestRate(e.target.value)}
@@ -57,6 +58,7 @@ const Mortgage = ({ number }) => {
               <br />
               Loan Term (in years):{" "}
               <input
+              className="text-black rounded-md"
                 type="number"
                 value={loanTerm}
                 onChange={(e) => setLoanTerm(e.target.value)}
@@ -72,7 +74,7 @@ const Mortgage = ({ number }) => {
                 <Email />
                 <br />
                 <Link to="/questionnaire">
-                  <button className=" bg-[#715959] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  <button className=" button hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Start Over!
                   </button>
                 </Link>

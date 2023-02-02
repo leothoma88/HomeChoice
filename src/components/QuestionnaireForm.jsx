@@ -71,17 +71,19 @@ function QuestionnaireForm(props) {
   return (
     <div className="h-screen flex justify-center sm:flex-wrap">
       <form
-        className="question-form m-20 h-2/3 w-1/2 rounded-md "
+
+        className="question-form h-2/3 w-1/2 rounded-md "
+
         onSubmit={handleSubmit}
       >
         {/* first step of the questionnaire */}
         {currentStep === 1 && (
-          <div className="flex flex-wrap grid  flex justify-center m-8 font-extrabold text-center">
+          <div className="question-box flex flex-wrap grid flex justify-center font-extrabold text-center">
             <label className="font-sans" htmlFor="name">
               First Name:
             </label>
             <input
-              className="inline-block text-black rounded-md"
+              className="text-input inline-block text-black rounded-md"
               name="fname"
               type="text"
               id="fname"
@@ -91,7 +93,7 @@ function QuestionnaireForm(props) {
               Last Name:
             </label>
             <input
-              className="inline-block text-black rounded-md"
+              className="text-input inline-block text-black rounded-md"
               type="text"
               name="lname"
               id="lname"
@@ -99,7 +101,7 @@ function QuestionnaireForm(props) {
             />
             <label htmlFor="name">Email:</label>
             <input
-              className="inline-block text-black rounded-md"
+              className="text-input inline-block text-black rounded-md"
               type="text"
               name="email"
               id="email"
@@ -107,7 +109,7 @@ function QuestionnaireForm(props) {
             />
             <label htmlFor="name">Phone Number:</label>
             <input
-              className="inline-block text-black rounded-md"
+              className="text-input inline-block text-black rounded-md"
               type="text"
               name="phoneNumber"
               id="phoneNumber"
@@ -126,7 +128,7 @@ function QuestionnaireForm(props) {
         )}
         {/* second step of the questionnaire */}
         {currentStep === 2 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8 rounded-2xl">
+          <div className="question-box flex flex-wrap font-extrabold grid flex justify-center rounded-2xl">
             <label className="prompt">
               Which one of these fits your needs best?
             </label>
@@ -209,7 +211,7 @@ function QuestionnaireForm(props) {
         )}
         {/* third step of the questionnaire */}
         {currentStep === 3 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+          <div className="question-box flex flex-wrap font-extrabold grid flex justify-center ">
             <label className="prompt">
               Which style of home would fit your needs the best?
             </label>
@@ -255,7 +257,7 @@ function QuestionnaireForm(props) {
         )}
         {/* fourth step of the questionnaire */}
         {currentStep === 4 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+          <div className="flex flex-wrap font-extrabold grid flex justify-center">
             <label className="prompt">How many stories do you need?</label>
             <div className="font-extrabold text-start grid flex justify-center m-8">
               <div>
@@ -321,7 +323,7 @@ function QuestionnaireForm(props) {
         )}
         {/* fifth step of the questionnaire */}
         {currentStep === 5 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+          <div className="flex flex-wrap font-extrabold grid flex justify-center">
             <label className="prompt">How much space do you need?</label>
 
             <div className="font-extrabold text-start grid flex justify-center m-8">
@@ -401,7 +403,7 @@ function QuestionnaireForm(props) {
         )}
         {/* second step of the questionnaire */}
         {currentStep === 6 && (
-          <div className="font-extrabold grid flex justify-center m-8">
+          <div className="font-extrabold grid flex justify-center">
             <label className="prompt grid ml-18 text-center  flex justify-center">
               Which areas would you prefer the most?
             </label>
@@ -500,7 +502,7 @@ function QuestionnaireForm(props) {
         )}
         {/* third step of the questionnaire */}
         {currentStep === 7 && (
-          <div className="flex flex-wrap font-extrabold grid flex justify-center m-8">
+          <div className="flex flex-wrap font-extrabold grid flex justify-center">
             <div className="mb-8 grid flex justify-center">
               ALL DONE!
               <div>

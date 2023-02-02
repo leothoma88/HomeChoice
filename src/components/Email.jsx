@@ -5,8 +5,9 @@ import { json, useLocation } from "react-router-dom";
 
 function EmailButton() {
   //Pulls formData
-  const location = useLocation();
-  const formData = location.state.formData || {};
+  // const location = useLocation();
+  // const formData = location.state.formData || {};
+  const formData = {};
   const handleClick = () => {
 
    

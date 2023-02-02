@@ -4,7 +4,7 @@ import Email from "./Email";
 
 const Mortgage = ({ number }) => {
   const [loanAmount, setLoanAmount] = useState(0);
-  console.log(number, "trippy");
+  // console.log(number, "trippy");
   const [interestRate, setInterestRate] = useState(6);
   const [loanTerm, setLoanTerm] = useState(30);
   const [monthlyPayment, setMonthlyPayment] = useState(0);

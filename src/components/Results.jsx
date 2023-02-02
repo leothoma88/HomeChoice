@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 
 function Results() {
   const location = useLocation();
-  const formData = location.state.formData || {};
+  const formData = location?.state || {};
+
+  console.log(formData,"HJJJJJJJJ")
 
   const {
     area,
@@ -19,7 +21,8 @@ function Results() {
     space,
     story,
     style,
-  } = location.state?.formData;
+  } = location?.state;
+
 
   //Visibility
   const [isVisible, setIsVisible] = useState(true);
@@ -159,20 +162,20 @@ const handleBack = () => {
             <br />
             <h3>Your Criteria:</h3>
             <p>${houseArray && houseArray[number]?.list_price}</p>
-            <p>First Name: {formData.fname}</p>
+            <p>First Name: {fname}</p>
 
-            <p>Last Name: {formData.lname}</p>
+            <p>Last Name: {lname}</p>
             
-            <p>Email: {formData.email}</p>
+            <p>Email: {email}</p>
             
-            <p>Number: {formData.phoneNumber}</p>
+            <p>Number: {phoneNumber}</p>
             <br />
             
             <br />
           </div>
         </div>
       </div>
-      <div style={{ display: isSecondVisible ? "block" : "none" }}>
+      <div className="h-screen" style={{ display: isSecondVisible ? "block" : "none" }}>
         <Mortgage number={currentProp} />
       </div>
     </div>
